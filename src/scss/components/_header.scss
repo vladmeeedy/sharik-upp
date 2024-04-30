@@ -1,0 +1,136 @@
+@import '../variables';
+
+.header {
+  border-bottom: 1px solid $gray-line;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  @media (max-width: 645px) {
+    padding: 10px 10px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    background-color: #fff;
+    margin: 0px auto;
+    max-width: 1400px;
+
+    @media (max-width: 645px) {
+      .header__cart {
+        margin-left: -100px;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    @media (max-width: 645px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    :nth-child(1) {
+      width: 70px;
+      text-align: center;
+      margin-right: 10px;
+    }
+    h1 {
+      color: #0b8eb3;
+      font-size: 28px;
+      letter-spacing: 1%;
+      text-transform: uppercase;
+      font-style: oblique;
+      font-weight: 800;
+      width: max-content;
+
+      @media (max-width: 645px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: center;
+
+    .phoneNumber {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .phoneIcon {
+        color: #0b8eb3;
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-right: 5px;
+        &:hover {
+          color: darken(#0b8eb3, 10%);
+        }
+      }
+
+      p {
+        color: #0b8eb3;
+        font-size: 24px;
+        letter-spacing: 1%;
+        text-transform: uppercase;
+        font-style: oblique;
+        font-weight: 800;
+        width: max-content;
+        text-align: center;
+        &:hover {
+          color: darken(#0b8eb3, 8%);
+        }
+      }
+    }
+
+    .viber,
+    .telegram {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 30px;
+      .viberIcon {
+        color: #784f97;
+        width: 1.5rem;
+        height: 1.5rem;
+        &:hover {
+          color: darken(#784f97, 15%);
+        }
+      }
+      .telegramIcon {
+        color: #259bd8;
+        width: 1.5rem;
+        height: 1.5rem;
+        &:hover {
+          color: darken(#259bd8, 15%);
+        }
+      }
+      p {
+        color: #784f97;
+        font-style: oblique;
+        &:hover {
+          color: darken(#784f97, 15%);
+        }
+      }
+    }
+    .telegram {
+      p {
+        color: #29a0da;
+        &:hover {
+          color: darken(#259bd8, 15%);
+        }
+      }
+    }
+  }
+}
