@@ -1,29 +1,39 @@
 @import '../variables';
 
 .categories {
+  background-color: #fff;
+  min-width: 300px;
+  padding: 20px 15px;
+  border-radius: 3%;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   ul {
     display: flex;
+    flex-direction: column;
 
     li {
-      background-color: #f9f9f9;
-      padding: 13px 30px;
-      border-radius: 30px;
-      margin-right: 10px;
+      margin-bottom: 15px;
+      color: #fff;
+      background-color: #0b8eb3;
+      padding: 10px 30px;
+      border-radius: 10px;
+      // margin-right: 10px;
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.1s ease-in-out;
       @include noselect();
 
       &:hover {
-        background-color: darken(#f9f9f9, 2%);
+        background-color: darken(#0b8eb3, 2%);
+        color: #fff;
       }
 
       &:active {
-        background-color: darken(#f9f9f9, 5%);
+        background-color: darken(#0b8eb3, 5%);
+        color: #fff;
       }
 
       &.active {
-        background-color: #282828;
+        background-color: darken(#0b8eb3, 15%);;
         color: #fff;
       }
     }

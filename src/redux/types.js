@@ -1,0 +1,15 @@
+export const SortPropertyEnum = {
+    RATING_DESC: 'rating',
+    RATING_ASC: '-rating',
+    TITLE_DESC: 'title',
+    TITLE_ASC: '-title',
+    PRICE_DESC: 'price',
+    PRICE_ASC: '-price',
+  }
+  
+  export const Sort = {
+    name,
+    sortProperty: SortPropertyEnum
+  }
+  
+ 
