@@ -1,14 +1,14 @@
 import React from 'react'
 import { Categories } from '../components/Categories'
-import { PizzaBlock } from '../components/PizzaBlock'
-import { Skeleton } from '../components/PizzaBlock/Skeleton'
+import { BalloonsBlock } from '../components/BalloonsBlock'
+import { Skeleton } from '../components/BalloonsBlock/Skeleton'
 import { Pagination } from '../components/Pagination'
 import { useSelector } from 'react-redux'
 import { setCategoryId, setCurrentPage } from '../redux/filter/slice'
 
 import { selectFilter } from '../redux/filter/selectors'
-import { selectPizzaData } from '../redux/pizza/selectors'
-import { fetchPizzas } from '../redux/pizza/asyncActions'
+import { selectPizzaData } from '../redux/balloons/selectors'
+import { fetchBallons } from '../redux/balloons/asyncActions'
 import { useAppDispatch } from '../redux/store'
 import SimpleSlider from '../components/SimpleSlider'
 
@@ -33,7 +33,7 @@ const Home = () => {
     const search = searchValue ? `&search=${searchValue}` : ''
 
     dispatch(
-      fetchPizzas({
+      fetchBallons({
         order,
         sortBy,
         category,
@@ -60,7 +60,7 @@ const Home = () => {
       }
       return false
     })
-    .map((obj) => <PizzaBlock key={obj.id} {...obj} />)
+    .map((obj) => <BalloonsBlock key={obj.id} {...obj} />)
 
   const skeletons = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />
@@ -68,14 +68,11 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className="container__slider">
-        <div className="content__top">
+      <div className="content__top">
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
       </div>
       <SimpleSlider />
-      </div>
-      
-      <h2 className="content__title">Всі піци</h2>
+      <h4 className="content__title"><img src="/data/imаges/layered-heart.svg" alt='heart'/>Популярні композиції <img src="/data/imаges/layered-heart.svg" alt='heart'/></h4>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>Виникла помилка 😕</h2>
@@ -87,7 +84,9 @@ const Home = () => {
         </div>
       )}
 
-      <Pagination currentPage={currentPage} onChangePage={onChangePage} />
+      <div className="container__pagination">
+        <Pagination currentPage={currentPage} onChangePage={onChangePage} />
+      </div>
     </div>
   )
 }

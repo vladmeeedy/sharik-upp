@@ -1,0 +1,92 @@
+[
+  {
+    "id": "0",
+    "imageUrl": "/data/imаges/9-raznocvetnykh-sharov-khrom.jpg",
+    "title": "Набір кульок, ХРОМ, 9 шт.",
+    "description": "Натуральний латекс. Размір - 30 см. Виробник - Belbal (Польща). Тип - хром (насичений металевий блиск, повністю непрозорі).",    
+    "price": 855,
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": "1",
+    "imageUrl": "/data/imаges/9-sharov-s-konfetti.jpg",
+    "title": "Набір кульок з конфеті, 9 шт.",
+    "description": "Натуральний латекс. Размір - 30 см. Виробник - Belbal (Польща). Тип - хром (насичений металевий блиск, повністю непрозорі).",
+    "price": 855,    
+    "category": 0,
+    "rating": 6
+  },
+  {
+    "id": "2",
+    "imageUrl": "/data/imаges/20-sharov-mix-metalic.jpg",
+    "title": "Набір кульок металік, 20 шт.",
+    "description": "Натуральний латекс. Размір - 30 см. Виробник - Belbal (Польща). Тип - хром (насичений металевий блиск, повністю непрозорі).",
+    "price": 855,    
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": "3",
+    "imageUrl": "/data/imаges/buket-s-10-sharov-macaroons.jpg",
+    "title": "Набір кульок МАКАРУН, 10 шт.",
+    "description": "Натуральний латекс. Размір - 30 см. Виробник - Belbal (Польща). Тип - хром (насичений металевий блиск, повністю непрозорі).",
+    "price": 855,    
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": "4",
+    "imageUrl": "/data/imаges/buket-sharov-s-edinorogom.jpg",
+    "title": "Набір кульок з ЄДИНОРОГОМ",
+    "description": "Латексні кульки, 3шт., кульки з конфеті, 2 шт., фольговані серця, 6шт., фольгована фігура, Єдиноріг, 1 шт. ",
+    "price": 1775,    
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": "5",
+    "imageUrl": "/data/imаges/buket-sharov-schenyachiy-patrul.jpg",
+    "title": "Набір кульок з щеням в рожевому та цифрою",
+    "description": "Латексні кульки, 6шт., фольговані зірка, 1шт., коло, 1шт., фольгована фігура, Щеня в рожевому, 1 шт. ",
+    "price": 1150,    
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": "6",
+    "imageUrl": "/data/imаges/buket-sharov-s-belosnegkoi.jpg",
+    "title": "Набір кульок з БІЛОСНІЖКОЮ",
+    "description": "Латексні кульки, 11шт., фольговані сердечка, 2шт., фольгована фігура, Білосніжка, 1 шт. ",
+    "price": 1425,    
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": "7",
+    "imageUrl": "/data/imаges/shar-konfetti-s-zvezdami.jpg",
+    "title": "Набір кульок з конфеті та зірками",
+    "description": "Латексні кульки з конфеті, 4шт., фольговані зірки, 3шт.",
+    "price": 890,    
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": "8",
+    "imageUrl": "/data/imаges/shar-s-confety-i-zvezdoy.jpg",
+    "title": "Набір кулькок з конфеті та великою зіркою",
+    "description": "Латексні кульки з конфеті, 3шт., хром, золото, 4 шт., фольгована зірка, велика, 1шт.",
+    "price": 975,    
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": "9",
+    "imageUrl": "/data/imаges/shar-s-aculoy-i-cufra.jpg",
+    "title": "Набір кульок з конфеті, цифрою та фігурою АКУЛИ",
+    "description": "Латексні кульки з конфеті, 4шт., металік, 4 шт., фольгована фігура, акула, 1шт.",
+    "price": 1380,    
+    "category": 0,
+    "rating": 4
+  }
+]

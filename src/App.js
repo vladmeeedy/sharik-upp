@@ -28,7 +28,7 @@ function App() {
           }
         />
         <Route
-          path="pizza/:id"
+          path="balloons/:id"
           element={
             <React.Suspense fallback={<div>Loading...</div>}>
               <FullPizza />

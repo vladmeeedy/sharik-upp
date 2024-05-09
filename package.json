@@ -51,5 +51,10 @@
     "@types/react-slick": "^0.23.13",
     "prettier": "3.1.1",
     "react-scripts": "^5.0.1"
+  },
+  "resolutions": {
+    "alias": {
+      "public": "./public"
+    }
   }
 }

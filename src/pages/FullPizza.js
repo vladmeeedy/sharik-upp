@@ -9,24 +9,26 @@ const FullPizza = () => {
   React.useEffect(() => {
     async function fetshPizza() {
       try {
-        const { data } = await axios.get(
-          'https://65a92c59219bfa371868aad2.mockapi.io/items/' + id,
-        )
-        setPizza(data)
+        const { data } = await axios.get("/data/productsData.json")       
+        const [result] = data.filter((obj) => obj.id === id)
+        setPizza(result)
       } catch (error) {
-        alert('Помилка при отриманні піци')
+        alert('Помилка при отриманні товару')
         navigate('/')
       }
     }
     fetshPizza()
   }, [])
 
+  // console.log("balloons", data)
+  // console.log("idballoons", id);
+
   if (!pizza) {
     return 'loading...'
   }
   return (
     <div className="container">
-      <img src={process.env.PUBLIC_URL + pizza.imageUrl} alt="pizza" />
+      <img src={pizza.imageUrl} alt="pizza" />
       <h2>{pizza.title}</h2>
       <h4>{pizza.price}</h4>
       <Link to="/">

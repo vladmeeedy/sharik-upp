@@ -1,13 +1,53 @@
 @import '../variables';
-.slider-container{
-    max-width: 1000px;;
-    height: 390px;
-    margin-left: 2rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    img{
-        width: 200px;
-        height: 300px;
-        
-    }
+.slider-container {
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  padding: 10px;
 
+  .card {
+    width: 500px; /* Ширина блока */
+    height: 300px; /* Высота блока */
+    background-size: cover;
+    position: relative;
+
+    img {
+      width: 100%; /* Ширина блока */
+      height: 350px; /* Высота блока */
+      object-fit: cover;
+    }
+    p {
+      position: absolute;
+      font-size: 46px;
+      font-weight: 800;
+      font-style: italic;
+      color: #fff;
+
+      z-index: 1;
+      bottom: 20px;
+      right: 50px;
+
+      
+
+      span{
+        color: red;
+        margin-left: 10px;
+
+        svg{
+          padding-top: 15px;
+          width: 0.7em;
+        }
+        
+      }
+
+      :nth-child(2){
+        color:aqua;
+      }
+      :nth-child(3){
+        color:yellow;
+      }
+      
+    }
+  }
+  
 }

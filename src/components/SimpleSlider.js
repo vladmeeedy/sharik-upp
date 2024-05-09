@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { GoHeartFill } from "react-icons/go";
 
 
 
@@ -12,20 +13,24 @@ function SimpleSlider() {
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2000,
-    pauseOnHover: true
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    arrows: false
   };
   return (
     <div className="slider-container">
       <Slider {...settings}>
         <div className="card">
-          <img src="/imаges/AJ_balloon_1.svg" alt="" className="w-100"/>
+          <img src="/data/imаges/slider-1.jpg" alt=""/>
+          <p>Дитячі враження<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
         </div>
         <div className="card">
-          <img src="/imаges/AJ_balloon_2.svg" alt=""className="w-100"/>
+          <img src="/data/imаges/serca-pod-potolcom.jpg" alt=""/>
+          <p>Романтичні моменти<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
         </div>
         <div className="card">
-          <img src="/imаges/AJ_balloon_4.svg" alt="" className="w-100"/>
+          <img src="/data/imаges/Balloon-decor-for-events.jpg" alt="" className="w-100"/>
+          <p>Cвяткові події<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
         </div>        
       </Slider>
     </div>

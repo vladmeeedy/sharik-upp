@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from './img/Logo'
+import Logo from './Logo'
 import { NavLink, useLocation } from 'react-router-dom'
 import { PiPhoneCallBold } from 'react-icons/pi'
 import { FaTelegram } from 'react-icons/fa'
