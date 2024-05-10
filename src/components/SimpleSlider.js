@@ -22,15 +22,15 @@ function SimpleSlider() {
       <Slider {...settings}>
         <div className="card">
           <img src="/data/imаges/slider-1.jpg" alt=""/>
-          <p>Дитячі враження<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
+          <p>Детские впечатления<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
         </div>
         <div className="card">
           <img src="/data/imаges/serca-pod-potolcom.jpg" alt=""/>
-          <p>Романтичні моменти<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
+          <p>Романтические моменты<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
         </div>
         <div className="card">
           <img src="/data/imаges/Balloon-decor-for-events.jpg" alt="" className="w-100"/>
-          <p>Cвяткові події<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
+          <p>Праздничные события<span><GoHeartFill/></span><span><GoHeartFill/></span><span><GoHeartFill/></span></p>
         </div>        
       </Slider>
     </div>

@@ -20,8 +20,7 @@ const FullPizza = () => {
     fetshPizza()
   }, [])
 
-  // console.log("balloons", data)
-  // console.log("idballoons", id);
+
 
   if (!pizza) {
     return 'loading...'
@@ -29,7 +28,7 @@ const FullPizza = () => {
   return (
     <div className="container">
       <img src={pizza.imageUrl} alt="pizza" />
-      <h2>{pizza.title}</h2>
+      <h2>{pizza.title[0]}</h2>
       <h4>{pizza.price}</h4>
       <Link to="/">
         <button className="button button--outline button--add">

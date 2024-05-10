@@ -55,7 +55,7 @@ const Home = () => {
 
   const pizzas = items
     .filter((obj) => {
-      if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
+      if (obj.title[0].toLowerCase().includes(searchValue.toLowerCase())) {
         return true
       }
       return false
@@ -72,7 +72,7 @@ const Home = () => {
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
       </div>
       <SimpleSlider />
-      <h4 className="content__title"><img src="/data/imаges/layered-heart.svg" alt='heart'/>Популярні композиції <img src="/data/imаges/layered-heart.svg" alt='heart'/></h4>
+      <h4 className="content__title"><img src="/data/imаges/layered-heart.svg" alt='heart'/>Популярные композиции <img src="/data/imаges/layered-heart.svg" alt='heart'/></h4>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>Виникла помилка 😕</h2>

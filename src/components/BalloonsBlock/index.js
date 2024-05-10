@@ -33,11 +33,11 @@ export const BalloonsBlock = ({ id, title, price, imageUrl, description }) => {
             />
           </div>
 
-          <h4 className="pizza-block__title">{title}</h4>
+          <h4 className="pizza-block__title">{title[0]}</h4>
         </Link>
 
-        <div className="pizza-block__selector">
-          <p>{description}</p>
+        <div className="pizza-block__description">
+          <p>{description[0]}</p>
         </div>
         <div className="pizza-block__bottom">
           <div className="pizza-block__price">{price} ₴</div>
@@ -57,7 +57,7 @@ export const BalloonsBlock = ({ id, title, price, imageUrl, description }) => {
                 fill="white"
               />
             </svg>
-            <span>Додати</span>
+            <span>Добавить</span>
             {addedCount > 0 && <i>{addedCount}</i>}
           </button>
         </div>
