@@ -1,7 +1,7 @@
 import React from 'react'
 import { Categories } from '../components/Categories'
-import { BalloonsBlock } from '../components/BalloonsBlock'
-import { Skeleton } from '../components/BalloonsBlock/Skeleton'
+import { BalloonsBlock } from '../components/ProductsBlock'
+import { Skeleton } from '../components/ProductsBlock/Skeleton'
 import { Pagination } from '../components/Pagination'
 import { useSelector } from 'react-redux'
 import { setCategoryId, setCurrentPage } from '../redux/filter/slice'
@@ -29,7 +29,7 @@ const Home = () => {
   const getPizzas = () => {
     const order = sort.sortProperty.includes('-') ? 'asc' : 'desc'
     const sortBy = sort.sortProperty.replace('-', '')
-    const category = categoryId > 0 ? `category=${categoryId}` : ''
+    const category = categoryId
     const search = searchValue ? `&search=${searchValue}` : ''
 
     dispatch(
@@ -68,9 +68,9 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className="content__top">
+      {/* <div className="content__top">
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-      </div>
+      </div> */}
       <SimpleSlider />
       <h4 className="content__title"><img src="/data/imаges/layered-heart.svg" alt='heart'/>Популярные композиции <img src="/data/imаges/layered-heart.svg" alt='heart'/></h4>
       {status === 'error' ? (

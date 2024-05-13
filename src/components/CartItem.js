@@ -34,9 +34,9 @@ export const CartItem = ({
         <img className="pizza-block__image" src={process.env.PUBLIC_URL + imageUrl} alt="Pizza" />
       </div>
       <div className="cart__item-info">
-        <h3>{title}</h3>
+        <h3>{title[0]}</h3>
         <p>
-          {type}, {size} см.
+          {type}{size}
         </p>
       </div>
       <div className="cart__item-count">
