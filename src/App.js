@@ -1,5 +1,11 @@
 import './scss/app.scss'
 import Home from './pages/Home'
+import LatexBalloons from './pages/LatexBalloons'
+import FiguresBalloons from './pages/FiguresBalloons'
+import StarsBalloons from './pages/StarsBalloons'
+import NumbersBalloons from './pages/NumbersBalloons'
+import SurpriseBox from './pages/SurpriseBox'
+import CandlesCake from './pages/CandlesCake'
 import { Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import React from 'react'
@@ -19,6 +25,12 @@ function App() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route path="" element={<Home />} />
+        <Route path="gelievye-shary" element={<LatexBalloons />} />
+        <Route path="folgirovannye-figury" element={<FiguresBalloons />} />
+        <Route path="folgirovannye-zvezdy" element={<StarsBalloons />} />
+        <Route path="folgirovannye-cifry" element={<NumbersBalloons />} />
+        <Route path="korobka-syurpriz" element={<SurpriseBox />} />
+        <Route path="sechi-na-tort" element={<CandlesCake />} />
         <Route
           path="cart"
           element={

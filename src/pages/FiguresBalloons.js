@@ -4,15 +4,16 @@ import { Skeleton } from '../components/ProductsBlock/Skeleton'
 import { Pagination } from '../components/Pagination'
 import { useSelector } from 'react-redux'
 import { setCategoryId, setCurrentPage } from '../redux/filter/slice'
+
 import { selectFilter } from '../redux/filter/selectors'
 import { selectPizzaData } from '../redux/products/selectors'
 import { fetchBallons } from '../redux/products/asyncActions'
 import { useAppDispatch } from '../redux/store'
-import SimpleSlider from '../components/SimpleSlider'
 
-const Home = () => {
+const FiguresBalloons = () => {
   const dispatch = useAppDispatch()
-  const { categoryId, currentPage } = useSelector(selectFilter)
+  const { categoryId, sort, currentPage, searchValue } =
+    useSelector(selectFilter)
   const { items, status } = useSelector(selectPizzaData)
 
   const onChangeCategory = React.useCallback((idx) => {
@@ -24,10 +25,11 @@ const Home = () => {
   }
 
   const getPizzas = () => {
+    
     const category = categoryId
 
     dispatch(
-      fetchBallons({
+      fetchBallons({      
         category,
         currentPage: String(currentPage),
       }),
@@ -46,7 +48,7 @@ const Home = () => {
 
   const pizzas = items
     .filter((obj) => {
-      if (obj.category == 0) {
+      if (obj.category == 2) {
         return true
       }
       return false
@@ -58,19 +60,12 @@ const Home = () => {
   ))
 
   return (
-    <div className="container">
-      <SimpleSlider />
-      <h4 className="content__title">
-        <img src="/data/imаges/layered-heart.svg" alt="heart" />
-        Популярные композиции{' '}
-        <img src="/data/imаges/layered-heart.svg" alt="heart" />
-      </h4>
+    <div className="container">      
+      <h4 className="content__title"><img src="/data/imаges/layered-heart.svg" alt='heart'/>Латексные шарики <img src="/data/imаges/layered-heart.svg" alt='heart'/></h4>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>Возникла ошибка 😕</h2>
-          <p>
-            К сожалению, не удалось получить товары. Повторите попытку позже.
-          </p>
+          <p>К сожалению, не удалось получить товары. Повторите попытку позже.</p>
         </div>
       ) : (
         <div className="content__items">
@@ -85,4 +80,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default FiguresBalloons
