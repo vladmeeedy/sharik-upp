@@ -1,4 +1,8 @@
-<svg viewBox="0 0 310 510" version="1.0">
+import React from 'react'
+
+const Balloons = () => {
+  return (
+    <svg viewBox="0 0 310 510" version="1.0">
       <title id="title2749">Balloons</title>
       <defs id="defs4">
         <linearGradient id="linearGradient22425">
@@ -606,3 +610,7 @@
         </g>
       </g>
     </svg>
+  )
+}
+
+export default Balloons

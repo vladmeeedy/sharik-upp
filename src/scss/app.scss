@@ -57,10 +57,10 @@ body {
   }
 
   &__title {
-    font-weight: 800;
+        font-weight: 800;
     font-size: 38px;
-    margin-top: 10px;
     margin-bottom: 10px;
+    padding-top: 50px;
     text-align: center;
     font-style: italic;
 
@@ -742,4 +742,38 @@ body {
       }
     }
   }
+
+  
+  
 }
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    border: solid 0.5px;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 24px;
+
+
+  }
+  
+  .scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: #0dadd9;
+    color: #fff;
+  }

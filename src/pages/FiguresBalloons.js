@@ -1,9 +1,7 @@
 import React from 'react'
 import { BalloonsBlock } from '../components/ProductsBlock'
 import { Skeleton } from '../components/ProductsBlock/Skeleton'
-import { Pagination } from '../components/Pagination'
 import { useSelector } from 'react-redux'
-import { setCategoryId, setCurrentPage } from '../redux/filter/slice'
 
 import { selectFilter } from '../redux/filter/selectors'
 import { selectPizzaData } from '../redux/products/selectors'
@@ -12,39 +10,24 @@ import { useAppDispatch } from '../redux/store'
 
 const FiguresBalloons = () => {
   const dispatch = useAppDispatch()
-  const { categoryId, sort, currentPage, searchValue } =
-    useSelector(selectFilter)
+  const { categoryId } = useSelector(selectFilter)
   const { items, status } = useSelector(selectPizzaData)
 
-  const onChangeCategory = React.useCallback((idx) => {
-    dispatch(setCategoryId(idx))
-  }, [])
-
-  const onChangePage = (value) => {
-    dispatch(setCurrentPage(value))
-  }
-
   const getPizzas = () => {
-    
     const category = categoryId
 
     dispatch(
-      fetchBallons({      
+      fetchBallons({
         category,
-        currentPage: String(currentPage),
       }),
     )
     window.scrollTo(0, 0)
   }
 
   React.useEffect(() => {
-    getPizzas()
-  }, [categoryId, currentPage])
-
-  React.useEffect(() => {
     window.scrollTo(0, 0)
     getPizzas()
-  }, [categoryId, currentPage])
+  }, [categoryId])
 
   const pizzas = items
     .filter((obj) => {
@@ -60,22 +43,24 @@ const FiguresBalloons = () => {
   ))
 
   return (
-    <div className="container">      
-      <h4 className="content__title"><img src="/data/imаges/layered-heart.svg" alt='heart'/>Латексные шарики <img src="/data/imаges/layered-heart.svg" alt='heart'/></h4>
+    <div className="container">
+      <h1 className="content__title">
+        <img src="/data/imаges/layered-heart.svg" alt="heart" />
+        Фольгированные фигуры{' '}
+        <img src="/data/imаges/layered-heart.svg" alt="heart" />
+      </h1>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>Возникла ошибка 😕</h2>
-          <p>К сожалению, не удалось получить товары. Повторите попытку позже.</p>
+          <p>
+            К сожалению, не удалось получить товары. Повторите попытку позже.
+          </p>
         </div>
       ) : (
         <div className="content__items">
           {status === 'loading' ? skeletons : pizzas}
         </div>
       )}
-
-      <div className="container__pagination">
-        <Pagination currentPage={currentPage} onChangePage={onChangePage} />
-      </div>
     </div>
   )
 }

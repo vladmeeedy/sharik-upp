@@ -7,6 +7,8 @@ import { setCategoryId } from '../redux/filter/slice'
 import { selectFilter } from '../redux/filter/selectors'
 import { useAppDispatch } from '../redux/store'
 import { useSelector } from 'react-redux'
+import Footer from '../components/Footer'
+import ScrollToTopButton from '../components/ScrollToTopButton'
 
 
 const MainLayout = () => {
@@ -33,6 +35,8 @@ const MainLayout = () => {
           <Outlet />
         </div>
       </div>
+      <Footer/>
+      <ScrollToTopButton/>
     </>
   )
 }

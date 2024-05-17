@@ -30,7 +30,7 @@ function App() {
         <Route path="folgirovannye-zvezdy" element={<StarsBalloons />} />
         <Route path="folgirovannye-cifry" element={<NumbersBalloons />} />
         <Route path="korobka-syurpriz" element={<SurpriseBox />} />
-        <Route path="sechi-na-tort" element={<CandlesCake />} />
+        <Route path="svechi-na-tort" element={<CandlesCake />} />
         <Route
           path="cart"
           element={

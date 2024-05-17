@@ -25,11 +25,10 @@ const CandlesCake = () => {
   }
 
   const getPizzas = () => {
-    
     const category = categoryId
 
     dispatch(
-      fetchBallons({      
+      fetchBallons({
         category,
         currentPage: String(currentPage),
       }),
@@ -60,12 +59,18 @@ const CandlesCake = () => {
   ))
 
   return (
-    <div className="container">      
-      <h4 className="content__title"><img src="/data/imаges/layered-heart.svg" alt='heart'/>Латексные шарики <img src="/data/imаges/layered-heart.svg" alt='heart'/></h4>
+    <div className="container">
+      <h1 className="content__title">
+        <img src="/data/imаges/layered-heart.svg" alt="heart" />
+        Свечи на торт
+        <img src="/data/imаges/layered-heart.svg" alt="heart" />
+      </h1>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>Возникла ошибка 😕</h2>
-          <p>К сожалению, не удалось получить товары. Повторите попытку позже.</p>
+          <p>
+            К сожалению, не удалось получить товары. Повторите попытку позже.
+          </p>
         </div>
       ) : (
         <div className="content__items">

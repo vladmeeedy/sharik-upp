@@ -50,7 +50,7 @@ export const Categories = React.memo(() => {
         
       
           <NavLink 
-            to="/sechi-na-tort" 
+            to="/svechi-na-tort" 
             activeClassName="active">
             Свечи на торт
           </NavLink>

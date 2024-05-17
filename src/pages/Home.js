@@ -1,9 +1,7 @@
 import React from 'react'
 import { BalloonsBlock } from '../components/ProductsBlock'
 import { Skeleton } from '../components/ProductsBlock/Skeleton'
-import { Pagination } from '../components/Pagination'
 import { useSelector } from 'react-redux'
-import { setCategoryId, setCurrentPage } from '../redux/filter/slice'
 import { selectFilter } from '../redux/filter/selectors'
 import { selectPizzaData } from '../redux/products/selectors'
 import { fetchBallons } from '../redux/products/asyncActions'
@@ -12,16 +10,8 @@ import SimpleSlider from '../components/SimpleSlider'
 
 const Home = () => {
   const dispatch = useAppDispatch()
-  const { categoryId, currentPage } = useSelector(selectFilter)
+  const { categoryId } = useSelector(selectFilter)
   const { items, status } = useSelector(selectPizzaData)
-
-  const onChangeCategory = React.useCallback((idx) => {
-    dispatch(setCategoryId(idx))
-  }, [])
-
-  const onChangePage = (value) => {
-    dispatch(setCurrentPage(value))
-  }
 
   const getPizzas = () => {
     const category = categoryId
@@ -29,20 +19,15 @@ const Home = () => {
     dispatch(
       fetchBallons({
         category,
-        currentPage: String(currentPage),
       }),
     )
     window.scrollTo(0, 0)
   }
 
   React.useEffect(() => {
-    getPizzas()
-  }, [categoryId, currentPage])
-
-  React.useEffect(() => {
     window.scrollTo(0, 0)
     getPizzas()
-  }, [categoryId, currentPage])
+  }, [categoryId])
 
   const pizzas = items
     .filter((obj) => {
@@ -60,11 +45,11 @@ const Home = () => {
   return (
     <div className="container">
       <SimpleSlider />
-      <h4 className="content__title">
+      <h1 className="content__title">
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
-        Популярные композиции{' '}
+        Наборы шариков{' '}
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
-      </h4>
+      </h1>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>Возникла ошибка 😕</h2>
@@ -77,10 +62,6 @@ const Home = () => {
           {status === 'loading' ? skeletons : pizzas}
         </div>
       )}
-
-      <div className="container__pagination">
-        <Pagination currentPage={currentPage} onChangePage={onChangePage} />
-      </div>
     </div>
   )
 }
