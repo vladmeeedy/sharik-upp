@@ -9,6 +9,12 @@ import CandlesCake from './pages/CandlesCake'
 import { Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import React from 'react'
+import About from './pages/AboutUs'
+import Guarantee from './pages/Guarantee'
+import ContractOfer from './pages/ContractOfer'
+import AboutUs from './pages/AboutUs'
+import Contacts from './pages/Contacts'
+
 
 const Cart = React.lazy(
   () => import(/*webpackChunkName: "Cart"*/ './pages/Cart'),
@@ -55,6 +61,10 @@ function App() {
             </React.Suspense>
           }
         />
+        <Route path="o-nas" element={<AboutUs />} />
+        <Route path="garantiya-i-vozvrat" element={<Guarantee />} />
+        <Route path="dogovor-oferty" element={<ContractOfer />} />
+        <Route path="contact-us" element={<Contacts />} />
       </Route>
     </Routes>
   )
