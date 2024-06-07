@@ -1,0 +1,85 @@
+@import '../variables';
+
+.order-container {
+  width: 80%;
+  .content__title {
+    font-size: 20px;
+    border-bottom: 1px solid rgb(165, 163, 163);
+    padding: 16px;
+  }
+}
+
+form {
+  margin-top: 30px;
+}
+
+.input-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+    font-weight: bold;
+  }
+}
+.custom-input {
+  display: block;
+  width: 70%;
+  min-width: 125px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #22202e;
+  border: 1px solid #d8d8d8;
+  line-height: 40px;
+  padding: 5px;
+}
+
+.custom-input:focus {
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 1em;
+  position: absolute;
+  left: 150px;
+}
+
+.input-container-datepicker {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+
+  label {
+    font-weight: bold;
+  }
+
+  .react-datepicker-wrapper {
+    width: 70%;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.custom-datepicker {
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  color: #22202e;
+  border: 1px solid #d8d8d8;
+  line-height: 40px;
+  padding: 0 0 0 10px;
+}
+
+.custom-calendar .react-datepicker__header {
+  background-color: #f0f0f0;
+}
+
+.custom-calendar .react-datepicker__day--selected,
+.custom-calendar .react-datepicker__day--keyboard-selected {
+  background-color: #007bff;
+  color: white;
+}
