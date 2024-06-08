@@ -1,3 +1,3 @@
 import { RootState } from '../store'
 
-export const selectPizzaData = (state) => state.pizza
+export const selectProductData = (state) => state.product

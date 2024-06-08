@@ -17,8 +17,8 @@ import Contacts from './pages/ContactUs'
 const Cart = React.lazy(
   () => import(/*webpackChunkName: "Cart"*/ './pages/Cart'),
 )
-const FullPizza = React.lazy(
-  () => import(/*webpackChunkName: "FullPizza"*/ './pages/FullPizza'),
+const FullProduct = React.lazy(
+  () => import(/*webpackChunkName: "FullProduct"*/ './pages/FullProduct'),
 )
 const NotFound = React.lazy(
   () => import(/*webpackChunkName: "NotFound"*/ './pages/NotFound'),
@@ -47,7 +47,7 @@ function App() {
           path="balloons/:id"
           element={
             <React.Suspense fallback={<div>Loading...</div>}>
-              <FullPizza />
+              <FullProduct />
             </React.Suspense>
           }
         />

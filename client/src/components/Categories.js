@@ -7,51 +7,50 @@ export const Categories = React.memo(() => {
       <ul>
       
           <NavLink 
-            exact 
             to="/" 
-            activeClassName="active">
+            className={({ isActive }) => (isActive ? 'active' : '')}>
             Наборы
           </NavLink>
         
       
           <NavLink 
             to="/gelievye-shary" 
-            activeClassName="active">
+            className={({ isActive }) => (isActive ? 'active' : '')}>
             Гелиевые шарики
           </NavLink>
         
       
           <NavLink 
             to="/folgirovannye-figury" 
-            activeClassName="active">
+            className={({ isActive }) => (isActive ? 'active' : '')}>
             Фольгированные фигуры
           </NavLink>
         
       
           <NavLink 
             to="/folgirovannye-zvezdy" 
-            activeClassName="active">
+            className={({ isActive }) => (isActive ? 'active' : '')}>
             Фольгированные звезды, сердца
           </NavLink>
         
       
           <NavLink 
             to="/folgirovannye-cifry" 
-            activeClassName="active">
+            className={({ isActive }) => (isActive ? 'active' : '')}>
             Цифры
           </NavLink>
         
       
           <NavLink 
             to="/korobka-syurpriz" 
-            activeClassName="active">
+            className={({ isActive }) => (isActive ? 'active' : '')}>
             Коробка-сюрприз
           </NavLink>
         
       
           <NavLink 
             to="/svechi-na-tort" 
-            activeClassName="active">
+            className={({ isActive }) => (isActive ? 'active' : '')}>
             Свечи на торт
           </NavLink>
       </ul>

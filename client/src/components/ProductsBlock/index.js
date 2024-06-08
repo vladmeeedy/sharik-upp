@@ -22,25 +22,25 @@ export const BalloonsBlock = ({ id, title, price, imageUrl, description }) => {
     dispatch(addItem(item))
   }
   return (
-    <div className="pizza-block-wrapper">
-      <div className="pizza-block">
+    <div className="product-block-wrapper">
+      <div className="product-block">
         <Link key={id} to={`/balloons/${id}`}>
-          <div className="pizza-block__image-container">
+          <div className="product-block__image-container">
             <img
-              className="pizza-block__image"
+              className="product-block__image"
               src={process.env.PUBLIC_URL + imageUrl}
               alt="Balloons"
             />
           </div>
 
-          <h4 className="pizza-block__title">{title[0]}</h4>
+          <h4 className="product-block__title">{title[0]}</h4>
         </Link>
 
-        <div className="pizza-block__description">
+        <div className="product-block__description">
           <p>{description[0]}</p>
         </div>
-        <div className="pizza-block__bottom">
-          <div className="pizza-block__price">{price} ₴</div>
+        <div className="product-block__bottom">
+          <div className="product-block__price">{price} ₴</div>
           <button
             onClick={onclickAdd}
             className="button button--outline button--add"

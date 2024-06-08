@@ -4,16 +4,16 @@ import { Skeleton } from '../components/ProductsBlock/Skeleton'
 import { useSelector } from 'react-redux'
 
 import { selectFilter } from '../redux/filter/selectors'
-import { selectPizzaData } from '../redux/products/selectors'
+import { selectProductData } from '../redux/products/selectors'
 import { fetchBallons } from '../redux/products/asyncActions'
 import { useAppDispatch } from '../redux/store'
 
 const LatexBalloons = () => {
   const dispatch = useAppDispatch()
   const { categoryId } = useSelector(selectFilter)
-  const { items, status } = useSelector(selectPizzaData)
+  const { items, status } = useSelector(selectProductData)
 
-  const getPizzas = () => {
+  const getProducts = () => {
     const category = categoryId
 
     dispatch(
@@ -26,10 +26,10 @@ const LatexBalloons = () => {
 
   React.useEffect(() => {
     window.scrollTo(0, 0)
-    getPizzas()
+    getProducts()
   }, [categoryId])
 
-  const pizzas = items
+  const products = items
     .filter((obj) => {
       if (obj.category == 1) {
         return true
@@ -58,7 +58,7 @@ const LatexBalloons = () => {
         </div>
       ) : (
         <div className="content__items">
-          {status === 'loading' ? skeletons : pizzas}
+          {status === 'loading' ? skeletons : products}
         </div>
       )}
     </div>

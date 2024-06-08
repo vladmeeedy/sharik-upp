@@ -31,7 +31,7 @@ export const CartItem = ({
   return (
     <div className="cart__item">
       <div className="cart__item-img">
-        <img className="pizza-block__image" src={process.env.PUBLIC_URL + imageUrl} alt="Pizza" />
+        <img className="product-block__image" src={process.env.PUBLIC_URL + imageUrl} alt="Poduct" />
       </div>
       <div className="cart__item-info">
         <h3>{title[0]}</h3>

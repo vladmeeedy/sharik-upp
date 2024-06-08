@@ -31,12 +31,12 @@
       >
       <stop
           id="stop11525"
-          style="stop-color:#a30b0a"
+          style="stopColor:#a30b0a"
           offset="0"
       />
       <stop
           id="stop11527"
-          style="stop-color:#ffffff"
+          style="stopColor:#ffffff"
           offset="1"
       />
     </linearGradient
@@ -53,12 +53,12 @@
       >
       <stop
           id="stop11533"
-          style="stop-color:#000000"
+          style="stopColor:#000000"
           offset="0"
       />
       <stop
           id="stop11535"
-          style="stop-color:#000000;stop-opacity:0"
+          style="stopColor:#000000;stopOpacity:0"
           offset="1"
       />
     </linearGradient
@@ -79,12 +79,12 @@
       >
       <stop
           id="stop11441"
-          style="stop-color:#ffffff"
+          style="stopColor:#ffffff"
           offset="0"
       />
       <stop
           id="stop11443"
-          style="stop-color:#ffffff;stop-opacity:0"
+          style="stopColor:#ffffff;stopOpacity:0"
           offset="1"
       />
     </linearGradient
@@ -111,12 +111,12 @@
       >
       <stop
           id="stop11475"
-          style="stop-color:#000000"
+          style="stopColor:#000000"
           offset="0"
       />
       <stop
           id="stop11477"
-          style="stop-color:#000000;stop-opacity:0"
+          style="stopColor:#000000;stopOpacity:0"
           offset="1"
       />
     </linearGradient
@@ -132,12 +132,12 @@
       >
       <stop
           id="stop11457"
-          style="stop-color:#ffffff"
+          style="stopColor:#ffffff"
           offset="0"
       />
       <stop
           id="stop11459"
-          style="stop-color:#ffffff;stop-opacity:0"
+          style="stopColor:#ffffff;stopOpacity:0"
           offset="1"
       />
     </radialGradient
@@ -154,12 +154,12 @@
       >
       <stop
           id="stop11417"
-          style="stop-color:#7d0202"
+          style="stopColor:#7d0202"
           offset="0"
       />
       <stop
           id="stop11419"
-          style="stop-color:#000000"
+          style="stopColor:#000000"
           offset="1"
       />
     </linearGradient
@@ -175,12 +175,12 @@
       >
       <stop
           id="stop11487"
-          style="stop-color:#ffffff"
+          style="stopColor:#ffffff"
           offset="0"
       />
       <stop
           id="stop11489"
-          style="stop-color:#ffffff;stop-opacity:0"
+          style="stopColor:#ffffff;stopOpacity:0"
           offset="1"
       />
     </radialGradient
@@ -197,12 +197,12 @@
       >
       <stop
           id="stop11429"
-          style="stop-color:#9a0000"
+          style="stopColor:#9a0000"
           offset="0"
       />
       <stop
           id="stop11431"
-          style="stop-color:#000000"
+          style="stopColor:#000000"
           offset="1"
       />
     </linearGradient
@@ -219,12 +219,12 @@
       >
       <stop
           id="stop11499"
-          style="stop-color:#000000"
+          style="stopColor:#000000"
           offset="0"
       />
       <stop
           id="stop11501"
-          style="stop-color:#000000;stop-opacity:0"
+          style="stopColor:#000000;stopOpacity:0"
           offset="1"
       />
     </linearGradient
@@ -241,12 +241,12 @@
       >
       <stop
           id="stop11407"
-          style="stop-color:#950101"
+          style="stopColor:#950101"
           offset="0"
       />
       <stop
           id="stop11409"
-          style="stop-color:#000000"
+          style="stopColor:#000000"
           offset="1"
       />
     </linearGradient
@@ -263,12 +263,12 @@
       >
       <stop
           id="stop11577"
-          style="stop-color:#000000"
+          style="stopColor:#000000"
           offset="0"
       />
       <stop
           id="stop11579"
-          style="stop-color:#000000;stop-opacity:0"
+          style="stopColor:#000000;stopOpacity:0"
           offset="1"
       />
     </linearGradient
@@ -284,12 +284,12 @@
       >
       <stop
           id="stop11557"
-          style="stop-color:#ffffff"
+          style="stopColor:#ffffff"
           offset="0"
       />
       <stop
           id="stop11559"
-          style="stop-color:#ffffff;stop-opacity:0"
+          style="stopColor:#ffffff;stopOpacity:0"
           offset="1"
       />
     </radialGradient
@@ -306,12 +306,12 @@
       >
       <stop
           id="stop11547"
-          style="stop-color:#000000"
+          style="stopColor:#000000"
           offset="0"
       />
       <stop
           id="stop11549"
-          style="stop-color:#000000;stop-opacity:0"
+          style="stopColor:#000000;stopOpacity:0"
           offset="1"
       />
     </linearGradient
@@ -328,12 +328,12 @@
       >
       <stop
           id="stop11381"
-          style="stop-color:#9c0001"
+          style="stopColor:#9c0001"
           offset="0"
       />
       <stop
           id="stop11383"
-          style="stop-color:#ffffff"
+          style="stopColor:#ffffff"
           offset="1"
       />
     </linearGradient

@@ -8,7 +8,7 @@ export const store = configureStore({
   reducer: {
     filter: filterSlice,
     cart: cartSlice,
-    pizza: balloonsSlice,
+    product: balloonsSlice,
   },
 })
 

@@ -26,7 +26,7 @@ app.post('/api/sendOrder', (req, res) => {
     Дата доставки: ${buyerInfo.deliveryDate}
     
     Товары:
-    ${cartItems.map(item => `- ${item.title}, количество: ${item.count}`).join('\n')}
+    ${cartItems.map(item => `- ${item.title[0]}, количество: ${item.count}`).join('\n')}
   `;
 
   const telegramMessage = encodeURIComponent(message);

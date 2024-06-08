@@ -2,50 +2,50 @@
       <title id="title2749">Balloons</title>
       <defs id="defs4">
         <linearGradient id="linearGradient22425">
-          <stop id="stop22427" stop-color="#f2f2f2" offset="0" />
-          <stop id="stop22433" stop-color="#c3c3c3" offset=".5" />
-          <stop id="stop22435" stop-color="#bdbdb5" offset=".5" />
-          <stop id="stop22437" stop-color="#f2f2f2" offset=".875" />
-          <stop id="stop22429" stop-color="#eeeeec" offset="1" />
+          <stop id="stop22427" stopColor="#f2f2f2" offset="0" />
+          <stop id="stop22433" stopColor="#c3c3c3" offset=".5" />
+          <stop id="stop22435" stopColor="#bdbdb5" offset=".5" />
+          <stop id="stop22437" stopColor="#f2f2f2" offset=".875" />
+          <stop id="stop22429" stopColor="#eeeeec" offset="1" />
         </linearGradient>
         <linearGradient id="linearGradient21422">
-          <stop id="stop21424" stop-color="#f19900" offset="0" />
+          <stop id="stop21424" stopColor="#f19900" offset="0" />
           <stop
             id="stop21426"
-            stop-color="#ddb100"
-            stop-opacity="0"
+            stopColor="#ddb100"
+            stopOpacity="0"
             offset="1"
           />
         </linearGradient>
         <linearGradient id="linearGradient20361">
-          <stop id="stop20363" stop-color="#40f100" offset="0" />
+          <stop id="stop20363" stopColor="#40f100" offset="0" />
           <stop
             id="stop20365"
-            stop-color="#3bdd00"
-            stop-opacity="0"
+            stopColor="#3bdd00"
+            stopOpacity="0"
             offset="1"
           />
         </linearGradient>
         <linearGradient id="linearGradient19337">
-          <stop id="stop19339" stop-color="#00a1f1" offset="0" />
+          <stop id="stop19339" stopColor="#00a1f1" offset="0" />
           <stop
             id="stop19341"
-            stop-color="#0085dd"
-            stop-opacity="0"
+            stopColor="#0085dd"
+            stopOpacity="0"
             offset="1"
           />
         </linearGradient>
         <linearGradient id="linearGradient15393">
-          <stop id="stop15395" stop-color="#f10000" offset="0" />
-          <stop id="stop15397" stop-color="#d00" stop-opacity="0" offset="1" />
+          <stop id="stop15395" stopColor="#f10000" offset="0" />
+          <stop id="stop15397" stopColor="#d00" stopOpacity="0" offset="1" />
         </linearGradient>
         <linearGradient id="linearGradient7586">
-          <stop id="stop7588" stop-color="#fff" stop-opacity="0" offset="0" />
-          <stop id="stop7590" stop-color="#f77" offset="1" />
+          <stop id="stop7588" stopColor="#fff" stopOpacity="0" offset="0" />
+          <stop id="stop7590" stopColor="#f77" offset="1" />
         </linearGradient>
         <linearGradient id="linearGradient4655">
-          <stop id="stop4657" stop-color="#fff" offset="0" />
-          <stop id="stop4659" stop-color="#fff" stop-opacity="0" offset="1" />
+          <stop id="stop4657" stopColor="#fff" offset="0" />
+          <stop id="stop4659" stopColor="#fff" stopOpacity="0" offset="1" />
         </linearGradient>
         <radialGradient
           id="radialGradient3660"
@@ -66,11 +66,11 @@
         >
           <stop
             id="stop20351"
-            stop-color="#71ff89"
-            stop-opacity="0"
+            stopColor="#71ff89"
+            stopOpacity="0"
             offset="0"
           />
-          <stop id="stop20353" stop-color="#07dd00" offset="1" />
+          <stop id="stop20353" stopColor="#07dd00" offset="1" />
         </radialGradient>
         <radialGradient
           id="radialGradient3664"
@@ -89,11 +89,11 @@
           gradientTransform="matrix(.96916 -1.6344 1.5736 .93311 -435.67 826.28)"
           r="55.438"
         >
-          <stop id="stop20357" stop-color="#08f100" offset="0" />
+          <stop id="stop20357" stopColor="#08f100" offset="0" />
           <stop
             id="stop20359"
-            stop-color="#6edd00"
-            stop-opacity="0"
+            stopColor="#6edd00"
+            stopOpacity="0"
             offset="1"
           />
         </radialGradient>
@@ -155,11 +155,11 @@
         >
           <stop
             id="stop18358"
-            stop-color="#71d9ff"
-            stop-opacity="0"
+            stopColor="#71d9ff"
+            stopOpacity="0"
             offset="0"
           />
-          <stop id="stop18360" stop-color="#0093dd" offset="1" />
+          <stop id="stop18360" stopColor="#0093dd" offset="1" />
         </radialGradient>
         <radialGradient
           id="radialGradient3680"
@@ -178,11 +178,11 @@
           gradientTransform="matrix(.96916 -1.6344 1.5736 .93311 -332.67 588.28)"
           r="55.438"
         >
-          <stop id="stop18364" stop-color="#00d1f1" offset="0" />
+          <stop id="stop18364" stopColor="#00d1f1" offset="0" />
           <stop
             id="stop18366"
-            stop-color="#0058dd"
-            stop-opacity="0"
+            stopColor="#0058dd"
+            stopOpacity="0"
             offset="1"
           />
         </radialGradient>
@@ -244,11 +244,11 @@
         >
           <stop
             id="stop3653"
-            stop-color="#ff7171"
-            stop-opacity="0"
+            stopColor="#ff7171"
+            stopOpacity="0"
             offset="0"
           />
-          <stop id="stop3655" stop-color="#d00" offset="1" />
+          <stop id="stop3655" stopColor="#d00" offset="1" />
         </radialGradient>
         <radialGradient
           id="radialGradient3696"
@@ -324,11 +324,11 @@
         >
           <stop
             id="stop21412"
-            stop-color="#ffe371"
-            stop-opacity="0"
+            stopColor="#ffe371"
+            stopOpacity="0"
             offset="0"
           />
-          <stop id="stop21414" stop-color="#dda200" offset="1" />
+          <stop id="stop21414" stopColor="#dda200" offset="1" />
         </radialGradient>
         <radialGradient
           id="radialGradient3712"
@@ -347,11 +347,11 @@
           gradientTransform="matrix(.96916 -1.6344 1.5736 .93311 -368.67 836.28)"
           r="55.438"
         >
-          <stop id="stop21418" stop-color="#f1b900" offset="0" />
+          <stop id="stop21418" stopColor="#f1b900" offset="0" />
           <stop
             id="stop21420"
-            stop-color="#ddb800"
-            stop-opacity="0"
+            stopColor="#ddb800"
+            stopOpacity="0"
             offset="1"
           />
         </radialGradient>
@@ -431,13 +431,13 @@
             />
             <path
               id="path19362"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linearGradient3670)"
               d="m357.85 630.82s1.0837 0.45153 1.5352 1.6255c0.45154 1.174 1.3546 4.2444 0.99338 4.7863-0.36123 0.54184-0.90307 0.81276-1.3546 0.90306-0.45154 0.0903-0.36123-0.81276-0.0903-1.8964 0.27092-1.0837 0.36123-0.99337 0-2.6189s-0.90307-2.7092-1.0837-2.7995z"
             />
             <path
               id="path19364"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linearGradient3672)"
               d="m348.55 635.6s2.8898-0.99337 3.251-1.5352c0.36123-0.54184 0.45153-1.2643 0.90307-1.4449 0.45153-0.18062 0.72245-0.81276 0.72245-0.81276l-1.6255-0.0903s0-0.99338-1.4449 0.90307-1.7158 3.0704-1.8061 2.9801z"
             />
@@ -483,13 +483,13 @@
             />
             <path
               id="path17369"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linearGradient3686)"
               d="m460.85 392.82s1.0837 0.45153 1.5352 1.6255c0.45154 1.174 1.3546 4.2444 0.99338 4.7863-0.36123 0.54184-0.90307 0.81276-1.3546 0.90306-0.45154 0.0903-0.36123-0.81276-0.0903-1.8964 0.27092-1.0837 0.36123-0.99337 0-2.6189s-0.90307-2.7092-1.0837-2.7995z"
             />
             <path
               id="path17371"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linearGradient3688)"
               d="m451.55 397.6s2.8898-0.99337 3.251-1.5352c0.36123-0.54184 0.45153-1.2643 0.90307-1.4449 0.45153-0.18062 0.72245-0.81276 0.72245-0.81276l-1.6255-0.0903s0-0.99338-1.4449 0.90307-1.7158 3.0704-1.8061 2.9801z"
             />
@@ -535,13 +535,13 @@
             />
             <path
               id="path15401"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linearGradient3702)"
               d="m240.85 395.82s1.0837 0.45153 1.5352 1.6255c0.45154 1.174 1.3546 4.2444 0.99338 4.7863-0.36123 0.54184-0.90307 0.81276-1.3546 0.90306-0.45154 0.0903-0.36123-0.81276-0.0903-1.8964 0.27092-1.0837 0.36123-0.99337 0-2.6189s-0.90307-2.7092-1.0837-2.7995z"
             />
             <path
               id="path16380"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linearGradient3704)"
               d="m231.55 400.6s2.8898-0.99337 3.251-1.5352c0.36123-0.54184 0.45153-1.2643 0.90307-1.4449 0.45153-0.18062 0.72245-0.81276 0.72245-0.81276l-1.6255-0.0903s0-0.99338-1.4449 0.90307-1.7158 3.0704-1.8061 2.9801z"
             />
@@ -587,13 +587,13 @@
             />
             <path
               id="path20400"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linearGradient3718)"
               d="m424.85 640.82s1.0837 0.45153 1.5352 1.6255c0.45154 1.174 1.3546 4.2444 0.99338 4.7863-0.36123 0.54184-0.90307 0.81276-1.3546 0.90306-0.45154 0.0903-0.36123-0.81276-0.0903-1.8964 0.27092-1.0837 0.36123-0.99337 0-2.6189s-0.90307-2.7092-1.0837-2.7995z"
             />
             <path
               id="path20402"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               fill="url(#linearGradient3720)"
               d="m415.55 645.6s2.8898-0.99337 3.251-1.5352c0.36123-0.54184 0.45153-1.2643 0.90307-1.4449 0.45153-0.18062 0.72245-0.81276 0.72245-0.81276l-1.6255-0.0903s0-0.99338-1.4449 0.90307-1.7158 3.0704-1.8061 2.9801z"
             />
