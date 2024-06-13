@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Logo = () => {
+const Logo = React.memo(() => {
   return (
     <svg
       version="1.1"
       x="0"
       y="0"
-    //   width="451"
-    //   height="451"
+      //   width="451"
+      //   height="451"
       viewBox="0, 0, 451, 451"
     >
       <defs>
@@ -1538,6 +1538,6 @@ const Logo = () => {
       </g>
     </svg>
   )
-}
+})
 
 export default Logo

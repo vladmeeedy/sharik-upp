@@ -20,7 +20,9 @@ const Footer = () => {
           <NavLink to="garantiya-i-vozvrat">Гарантия и возврат</NavLink>
           <NavLink to="dogovor-oferty">Договор оферты</NavLink>
           <NavLink to="contact-us">Контакты</NavLink>
-          <div className="contacts">
+          
+        </div>
+        <div className="contacts">
             <a className="phoneNumber" href="tel:+380980424818">
               <PiPhoneCallBold className="phoneIcon" />
               <p>(098) 042-48-18</p>
@@ -37,7 +39,6 @@ const Footer = () => {
               <p>telegram</p>
             </a>
           </div>
-        </div>
 
         <Balloons />
       </div>

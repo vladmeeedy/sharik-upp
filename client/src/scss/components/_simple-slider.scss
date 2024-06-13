@@ -27,6 +27,18 @@
       bottom: 20px;
       right: 50px;
 
+      @media (max-width: 820px) {
+        font-size: 40px;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      @media (max-width: 645px) {
+        font-size: 35px;
+        right: 5px;
+        bottom: 5px;
+      }
+
       
 
       span{

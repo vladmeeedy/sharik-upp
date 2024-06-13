@@ -14,30 +14,15 @@ const Balloons = () => {
         </linearGradient>
         <linearGradient id="linearGradient21422">
           <stop id="stop21424" stopColor="#f19900" offset="0" />
-          <stop
-            id="stop21426"
-            stopColor="#ddb100"
-            stopOpacity="0"
-            offset="1"
-          />
+          <stop id="stop21426" stopColor="#ddb100" stopOpacity="0" offset="1" />
         </linearGradient>
         <linearGradient id="linearGradient20361">
           <stop id="stop20363" stopColor="#40f100" offset="0" />
-          <stop
-            id="stop20365"
-            stopColor="#3bdd00"
-            stopOpacity="0"
-            offset="1"
-          />
+          <stop id="stop20365" stopColor="#3bdd00" stopOpacity="0" offset="1" />
         </linearGradient>
         <linearGradient id="linearGradient19337">
           <stop id="stop19339" stopColor="#00a1f1" offset="0" />
-          <stop
-            id="stop19341"
-            stopColor="#0085dd"
-            stopOpacity="0"
-            offset="1"
-          />
+          <stop id="stop19341" stopColor="#0085dd" stopOpacity="0" offset="1" />
         </linearGradient>
         <linearGradient id="linearGradient15393">
           <stop id="stop15395" stopColor="#f10000" offset="0" />
@@ -68,12 +53,7 @@ const Balloons = () => {
           gradientTransform="matrix(1.204 -8.9416e-8 1.3423e-7 1.8074 68.442 -3.3648)"
           r="81"
         >
-          <stop
-            id="stop20351"
-            stopColor="#71ff89"
-            stopOpacity="0"
-            offset="0"
-          />
+          <stop id="stop20351" stopColor="#71ff89" stopOpacity="0" offset="0" />
           <stop id="stop20353" stopColor="#07dd00" offset="1" />
         </radialGradient>
         <radialGradient
@@ -94,12 +74,7 @@ const Balloons = () => {
           r="55.438"
         >
           <stop id="stop20357" stopColor="#08f100" offset="0" />
-          <stop
-            id="stop20359"
-            stopColor="#6edd00"
-            stopOpacity="0"
-            offset="1"
-          />
+          <stop id="stop20359" stopColor="#6edd00" stopOpacity="0" offset="1" />
         </radialGradient>
         <radialGradient
           id="radialGradient3668"
@@ -157,12 +132,7 @@ const Balloons = () => {
           gradientTransform="matrix(1.204 -8.9416e-8 1.3423e-7 1.8074 171.44 -241.36)"
           r="81"
         >
-          <stop
-            id="stop18358"
-            stopColor="#71d9ff"
-            stopOpacity="0"
-            offset="0"
-          />
+          <stop id="stop18358" stopColor="#71d9ff" stopOpacity="0" offset="0" />
           <stop id="stop18360" stopColor="#0093dd" offset="1" />
         </radialGradient>
         <radialGradient
@@ -183,12 +153,7 @@ const Balloons = () => {
           r="55.438"
         >
           <stop id="stop18364" stopColor="#00d1f1" offset="0" />
-          <stop
-            id="stop18366"
-            stopColor="#0058dd"
-            stopOpacity="0"
-            offset="1"
-          />
+          <stop id="stop18366" stopColor="#0058dd" stopOpacity="0" offset="1" />
         </radialGradient>
         <radialGradient
           id="radialGradient3684"
@@ -246,12 +211,7 @@ const Balloons = () => {
           gradientTransform="matrix(1.204 -3.9537e-8 5.9582e-8 1.8145 -48.558 -240.44)"
           r="81"
         >
-          <stop
-            id="stop3653"
-            stopColor="#ff7171"
-            stopOpacity="0"
-            offset="0"
-          />
+          <stop id="stop3653" stopColor="#ff7171" stopOpacity="0" offset="0" />
           <stop id="stop3655" stopColor="#d00" offset="1" />
         </radialGradient>
         <radialGradient
@@ -326,12 +286,7 @@ const Balloons = () => {
           gradientTransform="matrix(1.204 -8.9416e-8 1.3423e-7 1.8074 135.44 6.6352)"
           r="81"
         >
-          <stop
-            id="stop21412"
-            stopColor="#ffe371"
-            stopOpacity="0"
-            offset="0"
-          />
+          <stop id="stop21412" stopColor="#ffe371" stopOpacity="0" offset="0" />
           <stop id="stop21414" stopColor="#dda200" offset="1" />
         </radialGradient>
         <radialGradient
@@ -352,12 +307,7 @@ const Balloons = () => {
           r="55.438"
         >
           <stop id="stop21418" stopColor="#f1b900" offset="0" />
-          <stop
-            id="stop21420"
-            stopColor="#ddb800"
-            stopOpacity="0"
-            offset="1"
-          />
+          <stop id="stop21420" stopColor="#ddb800" stopOpacity="0" offset="1" />
         </radialGradient>
         <radialGradient
           id="radialGradient3716"

@@ -137,7 +137,7 @@ const Cart = () => {
             </span>
           </div>
           <div className="cart__bottom-buttons">
-            <NavLink to="/" className="button button--outline button--add go-back-btn">
+            <NavLink to="/" className="go-back-btn">
               <svg
                 width="8"
                 height="14"
@@ -153,7 +153,7 @@ const Cart = () => {
                   strokeLinejoin="round"
                 ></path>
               </svg>
-              <span>Вернуться назад</span>
+              <span>Продолжить покупки</span>
             </NavLink>
           </div>
         </div>

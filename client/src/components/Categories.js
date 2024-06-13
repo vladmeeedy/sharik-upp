@@ -1,59 +1,30 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useMemo, useCallback } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Categories = React.memo(() => {
+  const links = useMemo(() => [
+    { to: "/", label: "Наборы" },
+    { to: "/gelievye-shary", label: "Гелиевые шарики" },
+    { to: "/folgirovannye-figury", label: "Фольгированные фигуры" },
+    { to: "/folgirovannye-zvezdy", label: "Фольгированные звезды, сердца" },
+    { to: "/folgirovannye-cifry", label: "Цифры" },
+    { to: "/korobka-syurpriz", label: "Коробка-сюрприз" },
+    { to: "/svechi-na-tort", label: "Свечи на торт" }
+  ], []);
+
   return (
     <div className="categories">
       <ul>
-      
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => (isActive ? 'active' : '')}>
-            Наборы
+        {links.map(link => (
+          <NavLink
+            key={link.to}
+            to={link.to}
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            <p>{link.label}</p>
           </NavLink>
-        
-      
-          <NavLink 
-            to="/gelievye-shary" 
-            className={({ isActive }) => (isActive ? 'active' : '')}>
-            Гелиевые шарики
-          </NavLink>
-        
-      
-          <NavLink 
-            to="/folgirovannye-figury" 
-            className={({ isActive }) => (isActive ? 'active' : '')}>
-            Фольгированные фигуры
-          </NavLink>
-        
-      
-          <NavLink 
-            to="/folgirovannye-zvezdy" 
-            className={({ isActive }) => (isActive ? 'active' : '')}>
-            Фольгированные звезды, сердца
-          </NavLink>
-        
-      
-          <NavLink 
-            to="/folgirovannye-cifry" 
-            className={({ isActive }) => (isActive ? 'active' : '')}>
-            Цифры
-          </NavLink>
-        
-      
-          <NavLink 
-            to="/korobka-syurpriz" 
-            className={({ isActive }) => (isActive ? 'active' : '')}>
-            Коробка-сюрприз
-          </NavLink>
-        
-      
-          <NavLink 
-            to="/svechi-na-tort" 
-            className={({ isActive }) => (isActive ? 'active' : '')}>
-            Свечи на торт
-          </NavLink>
+        ))}
       </ul>
     </div>
-  )
-})
+  );
+});

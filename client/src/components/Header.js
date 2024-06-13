@@ -2,13 +2,11 @@ import React from 'react'
 import Logo from './image/Logo'
 import { NavLink, useLocation } from 'react-router-dom'
 import { PiPhoneCallBold } from 'react-icons/pi'
-import { FaTelegram } from 'react-icons/fa'
-import { FaViber } from 'react-icons/fa'
-
+import { FaTelegram, FaViber } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 import { selectCart } from '../redux/cart/selectors'
 
-export const Header = () => {
+const Header = React.memo(() => {
   const { items, totalPrice } = useSelector(selectCart)
   const location = useLocation()
   const totalCount = items.reduce((sum, item) => sum + item.count, 0)
@@ -45,7 +43,6 @@ export const Header = () => {
             <p>telegram</p>
           </a>
         </div>
-        {/* {location.pathname !== '/cart' && <Search />} */}
         <div className="header__cart">
           {location.pathname !== '/cart' && (
             <NavLink to="/cart" className="button button--cart">
@@ -87,4 +84,6 @@ export const Header = () => {
       </div>
     </div>
   )
-}
+})
+
+export default Header
