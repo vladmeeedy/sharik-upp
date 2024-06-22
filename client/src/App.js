@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import React from 'react'
 import ContactUs from './pages/ContactUs'
+import OrderSccessPage from './pages/OrderSuccessPage'
 
 const Cart = React.lazy(
   () => import(/*webpackChunkName: "Cart"*/ './pages/Cart'),
@@ -45,6 +46,9 @@ const FullProduct = React.lazy(
 )
 const NotFound = React.lazy(
   () => import(/*webpackChunkName: "NotFound"*/ './pages/NotFound'),
+)
+const OrderSuccessPage = React.lazy(
+  () => import(/*webpackChunkName: "OrderSuccessPae"*/ './pages/OrderSuccessPage'),
 )
 
 function App() {
@@ -163,10 +167,46 @@ function App() {
             </React.Suspense>
           }
         />
-        <Route path="o-nas" element={<AboutUs />} />
-        <Route path="garantiya-i-vozvrat" element={<Guarantee />} />
-        <Route path="dogovor-oferty" element={<ContractOfer />} />
-        <Route path="contact-us" element={<Contacts />} />
+        <Route
+          path="o-nas"
+          element={
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <AboutUs />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="garantiya-i-vozvrat"
+          element={
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <Guarantee />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="dogovor-oferty"
+          element={
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <ContractOfer />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="contact-us"
+          element={
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <Contacts />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="zakaz-prunyat"
+          element={
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <OrderSuccessPage />
+            </React.Suspense>
+          }
+        />
       </Route>
     </Routes>
   )

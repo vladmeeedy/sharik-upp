@@ -1,5 +1,5 @@
 import React from 'react'
-import { BalloonsBlock } from '../components/ProductsBlock'
+import { ProductsBlock } from '../components/ProductsBlock'
 import { Skeleton } from '../components/ProductsBlock/Skeleton'
 import { useSelector } from 'react-redux'
 import { setCategoryId, setCurrentPage } from '../redux/filter/slice'
@@ -41,7 +41,7 @@ const SurpriseBox = () => {
       }
       return false
     })
-    .map((obj) => <BalloonsBlock key={obj.id} {...obj} />)
+    .map((obj) => <ProductsBlock key={obj.id} {...obj} />)
 
   const skeletons = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />

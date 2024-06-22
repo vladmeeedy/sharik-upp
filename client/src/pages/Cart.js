@@ -6,11 +6,12 @@ import { CartItem } from '../components/CartItem';
 import { CartEmpty } from '../components/CartEmpty';
 import  OrderForm  from '../components/OrderForm';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
   const dispatch = useDispatch();
   const { totalPrice, items } = useSelector(selectCart);
+  const navigate = useNavigate();
 
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
@@ -29,8 +30,8 @@ const Cart = () => {
     try {
       const response = await axios.post('http://localhost:5000/api/sendOrder', orderDetails);
       console.log(response.data);
-      // Очистка корзины после успешного заказа
-      dispatch(clearItems());
+      navigate("/zakaz-prunyat")
+      dispatch(clearItems());      
       alert('Заказ успешно отправлен');
     } catch (error) {
       console.error('Ошибка при отправке заказа:', error);

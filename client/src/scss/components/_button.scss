@@ -153,11 +153,17 @@
 
     @media (max-width: 645px) {
       padding: 4px;
+      
     }
 
     svg {
       margin-right: 3px;
       margin-bottom: 1px;
+
+      @media (max-width: 645px) {
+        min-width: 12px;
+        min-height: 12px;
+      }
     }
 
     span {
@@ -166,8 +172,9 @@
 
       @media (max-width: 645px) {
         font-weight: 600;
-        font-size: 12px;
+        font-size: 10px;
         margin-left: 4px;
+        white-space: nowrap;
       }
     }
   }

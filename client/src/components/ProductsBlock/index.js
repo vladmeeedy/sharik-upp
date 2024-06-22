@@ -4,7 +4,7 @@ import { addItem } from '../../redux/cart/slice'
 import { selectCartItemById } from '../../redux/cart/selectors'
 import { Link } from 'react-router-dom'
 
-export const BalloonsBlock = ({ id, title, price, imageUrl, description }) => {
+export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
   const dispatch = useDispatch()
   const cartItem = useSelector(selectCartItemById(id))
 

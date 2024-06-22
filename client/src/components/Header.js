@@ -5,6 +5,7 @@ import { PiPhoneCallBold } from 'react-icons/pi'
 import { FaTelegram, FaViber } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 import { selectCart } from '../redux/cart/selectors'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Header = React.memo(() => {
   const { items, totalPrice } = useSelector(selectCart)
@@ -43,6 +44,7 @@ const Header = React.memo(() => {
             <p>telegram</p>
           </a>
         </div>
+        <LanguageSwitcher/>
         <div className="header__cart">
           {location.pathname !== '/cart' && (
             <NavLink to="/cart" className="button button--cart">

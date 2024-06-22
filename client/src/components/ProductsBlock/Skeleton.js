@@ -1,31 +1,38 @@
 import React from 'react'
 import ContentLoader from 'react-content-loader'
 
-
-
-export const Skeleton = ({
-  speed = 2,
-  width = 315,
-  height = 531,
-  viewBox = '0 0 315 531',
-  backgroundColor = '#f3f3f3',
-  foregroundColor = '#ecebeb',
-}) => (
+export const Skeleton = (props) => (
   <ContentLoader
-    speed={speed}
-    width={width}
-    height={height}
-    viewBox={viewBox}
-    backgroundColor={backgroundColor}
-    foregroundColor={foregroundColor}
+    speed={2}
+    width={301}
+    height={524}
+    viewBox="0 0 301 524"
+    backgroundColor="#f3f3f3"
+    foregroundColor="#ecebeb"
+    {...props}
   >
-    <rect x="153" y="329" rx="0" ry="0" width="15" height="1" />
-    <rect x="115" y="318" rx="0" ry="0" width="1" height="0" />
-    <rect x="22" y="310" rx="0" ry="0" width="0" height="1" />
-    <circle cx="138" cy="130" r="128" />
-    <rect x="3" y="318" rx="5" ry="5" width="280" height="88" />
-    <rect x="4" y="425" rx="5" ry="5" width="70" height="26" />
-    <rect x="143" y="422" rx="25" ry="25" width="135" height="45" />
-    <rect x="2" y="273" rx="0" ry="0" width="278" height="27" />
+    <rect x="4" y="0" rx="6" ry="6" width="280" height="299" />
+    <rect x="4" y="311" rx="10" ry="10" width="279" height="30" />
+    <rect x="5" y="360" rx="11" ry="11" width="279" height="70" />
+    <rect x="7" y="454" rx="11" ry="11" width="61" height="44" />
+    <rect x="183" y="455" rx="18" ry="18" width="100" height="44" />
+    <style>
+      {`
+        @media (max-width: 760px) {
+          svg {
+            width: 100%;
+            height:100%;
+          }
+        }
+
+        @media (max-width: 645px) {
+          svg {
+            width: 100%;
+            height:100%;
+          }
+
+         
+      `}
+    </style>
   </ContentLoader>
 )
