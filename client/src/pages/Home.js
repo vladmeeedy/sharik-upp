@@ -7,11 +7,13 @@ import { selectProductData } from '../redux/products/selectors'
 import { fetchBallons } from '../redux/products/asyncActions'
 import { useAppDispatch } from '../redux/store'
 import SimpleSlider from '../components/SimpleSlider'
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
   const dispatch = useAppDispatch()
   const { categoryId } = useSelector(selectFilter)
   const { items, status } = useSelector(selectProductData)
+  const { t } = useTranslation();
 
   const getProducts = () => {
     const category = categoryId
@@ -47,13 +49,13 @@ const Home = () => {
       <SimpleSlider />
       <h1 className="content__title">
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
-        Наборы шариков <img src="/data/imаges/layered-heart.svg" alt="heart" />
+        {t('homeTitle')} <img src="/data/imаges/layered-heart.svg" alt="heart" />
       </h1>
       {status === 'error' ? (
         <div className="content__error-info">
-          <h2>Возникла ошибка 😕</h2>
+          <h2>{t('homeErrorTitle')} 😕</h2>
           <p>
-            К сожалению, не удалось получить товары. Повторите попытку позже.
+          {t('homeErrorDescription')}
           </p>
         </div>
       ) : (

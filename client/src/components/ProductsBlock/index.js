@@ -3,20 +3,22 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addItem } from '../../redux/cart/slice'
 import { selectCartItemById } from '../../redux/cart/selectors'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
   const dispatch = useDispatch()
   const cartItem = useSelector(selectCartItemById(id))
+  const { t, i18n } = useTranslation();
 
   const addedCount = cartItem ? cartItem.count : 0
 
   const onclickAdd = () => {
     const item = {
       id,
-      title,
+      title: title[i18n.language],
       price,
       imageUrl,
-      description,
+      description: description[i18n.language],
       count: 0,
     }
     dispatch(addItem(item))
@@ -29,15 +31,15 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
             <img
               className="product-block__image"
               src={process.env.PUBLIC_URL + imageUrl}
-              alt="Balloons"
+              alt={title[i18n.language]}
             />
           </div>
 
-          <h4 className="product-block__title">{title[0]}</h4>
+          <h4 className="product-block__title">{title[i18n.language]}</h4>
         </Link>
 
         <div className="product-block__description">
-          <p>{description[0]}</p>
+          <p>{description[i18n.language]}</p>
         </div>
         <div className="product-block__bottom">
           <div className="product-block__price">{price} ₴</div>
@@ -45,7 +47,7 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
             onClick={onclickAdd}
             className="button button--outline button--add"
           >
-            <span>Купить</span>
+            <span>{t('productsBlockButton')}</span>
             {addedCount > 0 && <i>{addedCount}</i>}
           </button>
         </div>

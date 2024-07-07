@@ -1,12 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import fetch from 'node-fetch'; // Используем import для node-fetch
+import fetch from 'node-fetch';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Telegram Bot API token и chat ID
 const TELEGRAM_API_TOKEN = '7438927464:AAEtXYOVk80bXFme_dKfApdqD93EOdpQkNo';
 const TELEGRAM_CHAT_ID = '675843760'; 
 
@@ -15,6 +14,9 @@ app.use(bodyParser.json());
 
 app.post('/api/sendOrder', (req, res) => {
   const { buyerInfo, cartItems } = req.body;
+
+  // Отладочные выводы
+  console.log('Received order:', req.body);
 
   const message = `
     Новый заказ:
@@ -26,8 +28,11 @@ app.post('/api/sendOrder', (req, res) => {
     Дата доставки: ${buyerInfo.deliveryDate}
     
     Товары:
-    ${cartItems.map(item => `- ${item.title[0]}, количество: ${item.count}`).join('\n')}
+    ${cartItems.map(item => `- ${item.title}, количество: ${item.count}`).join('\n')}
   `;
+
+  // Отладочные выводы для сообщения
+  console.log('Telegram message:', message);
 
   const telegramMessage = encodeURIComponent(message);
 

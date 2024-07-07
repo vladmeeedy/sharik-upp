@@ -5,21 +5,23 @@ import { NavLink } from 'react-router-dom'
 import { PiPhoneCallBold } from 'react-icons/pi'
 import { FaTelegram } from 'react-icons/fa'
 import { FaViber } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <div className="footer">
       <div className="container">
         <div className="container__logo">
           <Logo />
           <h1>SHARIK-UPP</h1>
-          <p>© Copyright - Все права защищены. 2024</p>
+          <p>© Copyright - {t('footerCopiright')} 2024</p>
         </div>
         <div className="container__info">
-          <NavLink to="o-nas">О нас</NavLink>
-          <NavLink to="garantiya-i-vozvrat">Гарантия и возврат</NavLink>
-          <NavLink to="dogovor-oferty">Договор оферты</NavLink>
-          <NavLink to="contact-us">Контакты</NavLink>
+          <NavLink to="o-nas">{t('footerAboutUs')}</NavLink>
+          <NavLink to="garantiya-i-vozvrat">{t('footerGuarantee')}</NavLink>
+          <NavLink to="dogovor-oferty">{t('footerContractOfer')}</NavLink>
+          <NavLink to="contact-us">{t('footerContactUs')}</NavLink>
           
         </div>
         <div className="contacts">

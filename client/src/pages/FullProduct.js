@@ -1,11 +1,14 @@
 import axios from 'axios'
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
+
 
 const FullProduct = () => {
   const { id } = useParams()
   const [product, setProduct] = React.useState()
   const navigate = useNavigate()
+  const { t, i18n } = useTranslation();
 
   React.useEffect(() => {
     async function fetchProduct() {
@@ -33,16 +36,16 @@ const FullProduct = () => {
     <div className="container">
       <div className="container-product">
         <div className="image-container">
-          <img src={product.imageUrl} alt="product" />
+          <img src={product.imageUrl} alt={product.title[i18n.language]} />
         </div>
         <div className="title-container">
           <div className="product-info">
             <span>Название:</span>
-             <p>{product.title[0]}</p>
+             <p>{product.title[i18n.language]}</p>
           </div>
           <div className="product-info">
             <span>Описание:</span>
-             <p>{product.description[0]}</p>
+             <p>{product.description[i18n.language]}</p>
           </div>
           <div className="product-info">
             <span>Цена:</span> <p>{product.price} ₴</p>

@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import React from 'react'
 import ContactUs from './pages/ContactUs'
-import OrderSccessPage from './pages/OrderSuccessPage'
+import './i18n.js';
 
 const Cart = React.lazy(
   () => import(/*webpackChunkName: "Cart"*/ './pages/Cart'),
@@ -48,7 +48,7 @@ const NotFound = React.lazy(
   () => import(/*webpackChunkName: "NotFound"*/ './pages/NotFound'),
 )
 const OrderSuccessPage = React.lazy(
-  () => import(/*webpackChunkName: "OrderSuccessPae"*/ './pages/OrderSuccessPage'),
+  () => import(/*webpackChunkName: "OrderSuccessPage"*/ './pages/OrderSuccessPage'),
 )
 
 function App() {

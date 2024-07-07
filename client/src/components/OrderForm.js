@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import * as Yup from 'yup'
+import { useTranslation } from 'react-i18next';
 
 const DatePickerField = ({ field, form }) => (
   <DatePicker
@@ -17,9 +18,11 @@ const DatePickerField = ({ field, form }) => (
 )
 
 const OrderForm = ({ onSubmit }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="order-container">
-      <h2 className="content__title">Покупатель</h2>
+      <h2 className="content__title">{t('orderFormTitle')}</h2>
       <Formik
         initialValues={{
           telephone: '',
@@ -84,7 +87,7 @@ const OrderForm = ({ onSubmit }) => {
             </div>
 
             <div className="input-container">
-              <label htmlFor="firstName">Имя</label>
+              <label htmlFor="firstName">{t('orderFormName')}</label>
               <Field type="text" name="firstName" className="custom-input" />
               <ErrorMessage
                 name="firstName"
@@ -94,7 +97,7 @@ const OrderForm = ({ onSubmit }) => {
             </div>
 
             <div className="input-container">
-              <label htmlFor="lastName">Фамилия</label>
+              <label htmlFor="lastName">{t('orderFormLastName')}</label>
               <Field type="text" name="lastName" className="custom-input" />
               <ErrorMessage
                 name="lastName"
@@ -104,7 +107,7 @@ const OrderForm = ({ onSubmit }) => {
             </div>
 
             <div className="input-container">
-              <label htmlFor="city">Город</label>
+              <label htmlFor="city">{t('orderFormCity')}</label>
               <Field type="text" name="city" className="custom-input" />
               <ErrorMessage
                 name="city"
@@ -114,7 +117,7 @@ const OrderForm = ({ onSubmit }) => {
             </div>
 
             <div className="input-container">
-              <label htmlFor="address">Адрес</label>
+              <label htmlFor="address">{t('orderFormAddress')}</label>
               <Field type="text" name="address" className="custom-input" />
               <ErrorMessage
                 name="address"
@@ -138,7 +141,7 @@ const OrderForm = ({ onSubmit }) => {
               className="button pay-btn"
               disabled={isSubmitting}
             >
-              Заказать
+              {t('orderFormButton')}
             </button>
           </Form>
         )}

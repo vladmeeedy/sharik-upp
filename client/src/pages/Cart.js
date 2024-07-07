@@ -7,11 +7,14 @@ import { CartEmpty } from '../components/CartEmpty';
 import  OrderForm  from '../components/OrderForm';
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 
 const Cart = () => {
   const dispatch = useDispatch();
   const { totalPrice, items } = useSelector(selectCart);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
@@ -37,6 +40,7 @@ const Cart = () => {
       console.error('Ошибка при отправке заказа:', error);
       alert('Ошибка при отправке заказа');
     }
+  console.log(orderDetails);
   };
 
   if (!totalPrice) {
@@ -81,7 +85,7 @@ const Cart = () => {
                 strokeLinejoin="round"
               ></path>
             </svg>
-            <h3>Корзина</h3>
+            <h3>{t('cartTitle')}</h3>
           </div>
           <div onClick={onClickClear} className="cart__clear">
             <svg
@@ -120,7 +124,7 @@ const Cart = () => {
                 strokeLinejoin="round"
               ></path>
             </svg>
-            <span>Очистить корзину</span>
+            <span>{t('cartClearItem')}</span>
           </div>
         </div>
         <div className="content__items">
@@ -131,10 +135,10 @@ const Cart = () => {
         <div className="cart__bottom">
           <div className="cart__bottom-details">
             <span>
-              Всего товаров: <b>{totalCount} шт.</b>
+            {t('cartTotalCount')}: <b>{totalCount} шт.</b>
             </span>
             <span>
-              Сумма заказа: <b>{totalPrice} грн</b>
+            {t('cartTotalPrice')}: <b>{totalPrice} грн</b>
             </span>
           </div>
           <div className="cart__bottom-buttons">
@@ -154,7 +158,7 @@ const Cart = () => {
                   strokeLinejoin="round"
                 ></path>
               </svg>
-              <span>Продолжить покупки</span>
+              <span>{t('cartGoBackButton')}</span>
             </NavLink>
           </div>
         </div>

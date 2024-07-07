@@ -1,40 +1,30 @@
-import React from 'react'
-import { TbHexagonNumber1 } from 'react-icons/tb'
-import { TbHexagonNumber2 } from 'react-icons/tb'
-import { TbHexagonNumber3 } from 'react-icons/tb'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { TbHexagonNumber1, TbHexagonNumber2, TbHexagonNumber3 } from 'react-icons/tb';
 
 const AboutUs = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="container">
-      <h1 className="content__title">О нас </h1>
+      <h1 className="content__title">{t('aboutUs')}</h1>
       <div className="container--about">
-        <p>Компания "Sharik-upp" это</p>
+        <p>{t('companyDescription')}</p>
         <p>
           <TbHexagonNumber1 />
-          Компания, которая работает с 2019 года на рынке доставки воздушных
-          шариков и праздничных аксесуаров по городу Киеву. Интернет магазин
-          "Sharik-upp" предоставляет отличный выбор различных шаров с гелием под
-          Ваш праздник. Заходите на наш сайт, выберите подходящий вариант, и мы
-          доставим вашу покупку в любой район Киева и в любое время! Просто
-          позвоните по одному из наших телефонных номеров и сделайте ваш заказ!
+          {t('aboutUsParagraph1')}
         </p>
         <p>
           <TbHexagonNumber2 />
-          Наш магазин находиться по адресу: г. Киев, пр-т Григоренко, 43, в
-          торговом центре. Удобно забирать шарики самовывозм или воспользоваться
-          услугой доставки
+          {t('aboutUsParagraph2')}
         </p>
         <p>
           <TbHexagonNumber3 />
-          Мы постоянно совершенствуемся, следим за последними трендами
-          аеродизайна, добавляем разние новинки в ассортимент нашего товаров.
-          Немалое значение приделяем изучению качества предлагаемых шарикрм,
-          время полета, визуальной стороны и т.п.
+          {t('aboutUsParagraph3')}
         </p>
-        <p></p>
       </div>
     </div>
-  )
+  );
 }
 
-export default AboutUs
+export default AboutUs;

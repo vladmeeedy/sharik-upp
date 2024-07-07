@@ -1,16 +1,19 @@
-import React, { useMemo, useCallback } from 'react';
+import React, { useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Categories = React.memo(() => {
+  const { t } = useTranslation();
+
   const links = useMemo(() => [
-    { to: "/", label: "Наборы" },
-    { to: "/gelievye-shary", label: "Гелиевые шарики" },
-    { to: "/folgirovannye-figury", label: "Фольгированные фигуры" },
-    { to: "/folgirovannye-zvezdy", label: "Фольгированные звезды, сердца" },
-    { to: "/folgirovannye-cifry", label: "Цифры" },
-    { to: "/korobka-syurpriz", label: "Коробка-сюрприз" },
-    { to: "/svechi-na-tort", label: "Свечи на торт" }
-  ], []);
+    { to: "/", label: t('categoryHomeBalloons') },
+    { to: "/gelievye-shary", label: t('categoryLatexBalloons') },
+    { to: "/folgirovannye-figury", label: t('categoryFiguresBalloons') },
+    { to: "/folgirovannye-zvezdy", label: t('categoryStarsBalloons') },
+    { to: "/folgirovannye-cifry", label: t('categoryNumbersBalloons') },
+    { to: "/korobka-syurpriz", label: t('categorySurpriseBox') },
+    { to: "/svechi-na-tort", label: t('categoryCandlesCake') }
+  ], [t]);
 
   return (
     <div className="categories">
