@@ -2,9 +2,9 @@ import './scss/app.scss'
 import Home from './pages/Home'
 import { Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
-import React from 'react'
+import React, { Suspense } from 'react'
 import ContactUs from './pages/ContactUs'
-import './i18n.js';
+import './i18n.js'
 
 const Cart = React.lazy(
   () => import(/*webpackChunkName: "Cart"*/ './pages/Cart'),
@@ -48,167 +48,170 @@ const NotFound = React.lazy(
   () => import(/*webpackChunkName: "NotFound"*/ './pages/NotFound'),
 )
 const OrderSuccessPage = React.lazy(
-  () => import(/*webpackChunkName: "OrderSuccessPage"*/ './pages/OrderSuccessPage'),
+  () =>
+    import(/*webpackChunkName: "OrderSuccessPage"*/ './pages/OrderSuccessPage'),
 )
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route
-          path="/"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <Home />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="gelievye-shary"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <LatexBalloons />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="folgirovannye-figury"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <FiguresBalloons />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="folgirovannye-zvezdy"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <StarsBalloons />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="folgirovannye-cifry"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <NumbersBalloons />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="korobka-syurpriz"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <SurpriseBox />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="svechi-na-tort"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <CandlesCake />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="cart"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <Cart />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="balloons/:id"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <FullProduct />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="o-nas"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <AboutUs />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="garantiya-i-vozvrat"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <Guarantee />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="dogovor-oferty"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <ContractOfer />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="contact-us"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <ContactUs />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <NotFound />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="o-nas"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <AboutUs />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="garantiya-i-vozvrat"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <Guarantee />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="dogovor-oferty"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <ContractOfer />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="contact-us"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <Contacts />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="zakaz-prunyat"
-          element={
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <OrderSuccessPage />
-            </React.Suspense>
-          }
-        />
-      </Route>
-    </Routes>
+    <Suspense fallback={<div>Loading translations...</div>}>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route
+            path="/"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Home />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="gelievye-shary"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <LatexBalloons />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="folgirovannye-figury"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <FiguresBalloons />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="folgirovannye-zvezdy"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <StarsBalloons />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="folgirovannye-cifry"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <NumbersBalloons />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="korobka-syurpriz"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <SurpriseBox />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="svechi-na-tort"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <CandlesCake />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="cart"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Cart />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="balloons/:id"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <FullProduct />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="o-nas"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <AboutUs />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="garantiya-i-vozvrat"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Guarantee />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="dogovor-oferty"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <ContractOfer />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="contact-us"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <ContactUs />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <NotFound />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="o-nas"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <AboutUs />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="garantiya-i-vozvrat"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Guarantee />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="dogovor-oferty"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <ContractOfer />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="contact-us"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Contacts />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="zakaz-prunyat"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <OrderSuccessPage />
+              </React.Suspense>
+            }
+          />
+        </Route>
+      </Routes>
+    </Suspense>
   )
 }
 

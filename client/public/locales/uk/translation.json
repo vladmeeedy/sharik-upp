@@ -107,5 +107,11 @@
       "imgAlt": "Порожній кошик",
       "buttonText": "Продовжити покупки"
     }
+  },
+
+  "slider": {
+    "childrenExperiences": "Дитячі враження",
+    "romanticMoments": "Романтичні моменти",
+    "holidayEvents": "Святкові події"
   }
 }

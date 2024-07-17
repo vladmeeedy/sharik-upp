@@ -1,0 +1,23 @@
+.root {
+  margin: 0 10px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    li {
+      button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: #0b8eb3;
+        font-size: 1.2 rem;
+      }
+    }
+  }
+
+  @media (max-width: 1030px) {
+    ul {
+      flex-direction: column;
+    }
+  }
+}

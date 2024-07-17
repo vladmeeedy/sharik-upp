@@ -3,8 +3,10 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { GoHeartFill } from 'react-icons/go'
 import LazyLoad from 'react-lazyload'
+import { useTranslation } from 'react-i18next'
 
 function SimpleSlider() {
+  const { t } = useTranslation();
   var settings = {
     dots: true,
     infinite: true,
@@ -25,7 +27,7 @@ function SimpleSlider() {
           </LazyLoad>
 
           <p>
-            Детские впечатления
+          {t('slider.childrenExperiences')}
             <span>
               <GoHeartFill />
             </span>
@@ -43,7 +45,7 @@ function SimpleSlider() {
           </LazyLoad>
 
           <p>
-            Романтические моменты
+          {t('slider.romanticMoments')}
             <span>
               <GoHeartFill />
             </span>
@@ -65,7 +67,7 @@ function SimpleSlider() {
           </LazyLoad>
 
           <p>
-            Праздничные события
+          {t('slider.holidayEvents')}
             <span>
               <GoHeartFill />
             </span>

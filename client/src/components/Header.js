@@ -44,7 +44,7 @@ const Header = React.memo(() => {
             <p>telegram</p>
           </a>
         </div>
-        <LanguageSwitcher/>
+        <LanguageSwitcher />
         <div className="header__cart">
           {location.pathname !== '/cart' && (
             <NavLink to="/cart" className="button button--cart">
