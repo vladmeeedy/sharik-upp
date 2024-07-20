@@ -31,7 +31,7 @@ const Cart = () => {
 
     try {
       const response = await axios.post(
-        '/.functions/server/sendOrder',
+        '/functions/server.mjs/sendOrder',
         orderDetails,
       )
       console.log(response.data)
