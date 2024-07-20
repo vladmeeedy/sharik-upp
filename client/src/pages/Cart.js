@@ -31,11 +31,11 @@ const Cart = () => {
 
     try {
       const response = await axios.post(
-        '/functions/server/sendOrder',
+        '/.netlify/functions/server/sendOrder',
         orderDetails,
       )
       console.log(response.data)
-      navigate('/zakaz-prunyat')
+      navigate('/zakaz-prinyat')
       dispatch(clearItems())
       alert('Заказ успешно отправлен')
     } catch (error) {

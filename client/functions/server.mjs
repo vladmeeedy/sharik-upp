@@ -54,6 +54,6 @@ router.post('/sendOrder', (req, res) => {
     })
 })
 
-app.use('/functions/server', router)
+app.use('/.netlify/functions/server', router)
 
 export const handler = serverless(app)
