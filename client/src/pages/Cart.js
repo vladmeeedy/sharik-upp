@@ -1,50 +1,52 @@
-import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import { clearItems } from '../redux/cart/slice';
-import { selectCart } from '../redux/cart/selectors';
-import { CartItem } from '../components/CartItem';
-import { CartEmpty } from '../components/CartEmpty';
-import  OrderForm  from '../components/OrderForm';
-import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-
+import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { clearItems } from '../redux/cart/slice'
+import { selectCart } from '../redux/cart/selectors'
+import { CartItem } from '../components/CartItem'
+import { CartEmpty } from '../components/CartEmpty'
+import OrderForm from '../components/OrderForm'
+import React from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Cart = () => {
-  const dispatch = useDispatch();
-  const { totalPrice, items } = useSelector(selectCart);
-  const navigate = useNavigate();
-  const { t } = useTranslation();
+  const dispatch = useDispatch()
+  const { totalPrice, items } = useSelector(selectCart)
+  const navigate = useNavigate()
+  const { t } = useTranslation()
 
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0)
 
   const onClickClear = () => {
     if (window.confirm('Очистить корзину?')) {
-      dispatch(clearItems());
+      dispatch(clearItems())
     }
-  };
+  }
 
   const handleSubmit = async (values) => {
     const orderDetails = {
       buyerInfo: values,
       cartItems: items,
-    };
+    }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/sendOrder', orderDetails);
-      console.log(response.data);
-      navigate("/zakaz-prunyat")
-      dispatch(clearItems());      
-      alert('Заказ успешно отправлен');
+      const response = await axios.post(
+        '/.netlify/functions/server/sendOrder',
+        orderDetails,
+      )
+      console.log(response.data)
+      navigate('/zakaz-prunyat')
+      dispatch(clearItems())
+      alert('Заказ успешно отправлен')
     } catch (error) {
-      console.error('Ошибка при отправке заказа:', error);
-      alert('Ошибка при отправке заказа');
+      console.error('Ошибка при отправке заказа:', error)
+      alert('Ошибка при отправке заказа')
     }
-  console.log(orderDetails);
-  };
+    console.log(orderDetails)
+  }
 
   if (!totalPrice) {
-    return <CartEmpty />;
+    return <CartEmpty />
   }
 
   return (
@@ -135,10 +137,10 @@ const Cart = () => {
         <div className="cart__bottom">
           <div className="cart__bottom-details">
             <span>
-            {t('cartTotalCount')}: <b>{totalCount} шт.</b>
+              {t('cartTotalCount')}: <b>{totalCount} шт.</b>
             </span>
             <span>
-            {t('cartTotalPrice')}: <b>{totalPrice} грн</b>
+              {t('cartTotalPrice')}: <b>{totalPrice} грн</b>
             </span>
           </div>
           <div className="cart__bottom-buttons">
@@ -164,7 +166,7 @@ const Cart = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart
