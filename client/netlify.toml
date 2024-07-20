@@ -2,6 +2,9 @@
   base = "client"
   publish = "build"
   command = "npm run build"
-  functions = "functions"
-  package = "@netlify/plugin-functions-install-cors"
 
+[functions]
+  directory = "client/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-cors"
