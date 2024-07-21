@@ -30,7 +30,7 @@ const Cart = () => {
     }
 
     try {
-      const response = await axios.post('/functions/server', orderDetails)
+      const response = await axios.post('.functions/server', orderDetails)
       console.log(response.data)
       navigate('/zakaz-prinyat')
       dispatch(clearItems())
