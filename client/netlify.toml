@@ -2,12 +2,9 @@
   base = "client"
   publish = "build"
   command = "npm run build"
-  functions = "netlify/functions"
+  functions = "server"
 [functions]
-  directory = "client/functions"
-[[redirects]]
-  from = "/functions/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+  directory = "server"
+
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
