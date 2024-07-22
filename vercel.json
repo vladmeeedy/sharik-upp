@@ -1,8 +1,24 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/api/sendOrder",
-      "destination": "/api/sendOrder.js"
+      "src": "api/sendOrder.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "client/build" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/sendOrder",
+      "dest": "/api/sendOrder.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/$1"
     }
   ]
 }
