@@ -30,7 +30,7 @@ const Cart = () => {
     }
     try {
       const response = await axios.post(
-        'https://sharik-8j1e8c9vp-volodymyrs-projects-d68f6c3e.vercel.app/api/sendOrder',
+        'https://sharik-upp.vercel.app/api/sendOrder',
         orderDetails,
       )
       console.log(response.data)
