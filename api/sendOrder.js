@@ -11,7 +11,11 @@ export const config = {
   },
 };
 
-const corsMiddleware = cors();
+const corsMiddleware = cors({
+  origin: "https://sharik-upp-git-main-volodymyrs-projects-d68f6c3e.vercel.app",
+  methods: ["POST"],
+  allowedHeaders: ["Content-Type"],
+});
 const bodyParserMiddleware = bodyParser.json();
 
 const runMiddleware = (req, res, fn) => {
@@ -29,6 +33,11 @@ export default async (req, res) => {
   await runMiddleware(req, res, corsMiddleware);
   await runMiddleware(req, res, bodyParserMiddleware);
 
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
+  }
+
   if (req.method !== "POST") {
     res.status(405).send({ message: "Only POST requests allowed" });
     return;
@@ -37,19 +46,19 @@ export default async (req, res) => {
   const { buyerInfo, cartItems } = req.body;
 
   const message = `
-      Новый заказ:
-      Имя: ${buyerInfo.firstName} ${buyerInfo.lastName}
-      Телефон: ${buyerInfo.telephone}
-      Email: ${buyerInfo.email}
-      Город: ${buyerInfo.city}
-      Адрес: ${buyerInfo.address}
-      Дата доставки: ${buyerInfo.deliveryDate}
-      
-      Товары:
-      ${cartItems
-        .map((item) => `- ${item.title}, количество: ${item.count}`)
-        .join("\n")}
-    `;
+        Новый заказ:
+        Имя: ${buyerInfo.firstName} ${buyerInfo.lastName}
+        Телефон: ${buyerInfo.telephone}
+        Email: ${buyerInfo.email}
+        Город: ${buyerInfo.city}
+        Адрес: ${buyerInfo.address}
+        Дата доставки: ${buyerInfo.deliveryDate}
+        
+        Товары:
+        ${cartItems
+          .map((item) => `- ${item.title}, количество: ${item.count}`)
+          .join("\n")}
+      `;
 
   const telegramMessage = encodeURIComponent(message);
 
