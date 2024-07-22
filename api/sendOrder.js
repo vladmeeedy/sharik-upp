@@ -12,7 +12,7 @@ export const config = {
 };
 
 const corsMiddleware = cors({
-  origin: "https://sharik-upp-git-main-volodymyrs-projects-d68f6c3e.vercel.app",
+  origin: "https://sharik-upp.vercel.app/",
   methods: ["POST"],
   allowedHeaders: ["Content-Type"],
 });
