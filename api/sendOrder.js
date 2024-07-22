@@ -37,19 +37,19 @@ export default async (req, res) => {
   const { buyerInfo, cartItems } = req.body;
 
   const message = `
-      Новый заказ:
-      Имя: ${buyerInfo.firstName} ${buyerInfo.lastName}
-      Телефон: ${buyerInfo.telephone}
-      Email: ${buyerInfo.email}
-      Город: ${buyerInfo.city}
-      Адрес: ${buyerInfo.address}
-      Дата доставки: ${buyerInfo.deliveryDate}
-      
-      Товары:
-      ${cartItems
-        .map((item) => `- ${item.title}, количество: ${item.count}`)
-        .join("\n")}
-    `;
+        Новый заказ:
+        Имя: ${buyerInfo.firstName} ${buyerInfo.lastName}
+        Телефон: ${buyerInfo.telephone}
+        Email: ${buyerInfo.email}
+        Город: ${buyerInfo.city}
+        Адрес: ${buyerInfo.address}
+        Дата доставки: ${buyerInfo.deliveryDate}
+        
+        Товары:
+        ${cartItems
+          .map((item) => `- ${item.title}, количество: ${item.count}`)
+          .join("\n")}
+      `;
 
   const telegramMessage = encodeURIComponent(message);
 

@@ -29,10 +29,7 @@ const Cart = () => {
       cartItems: items,
     }
     try {
-      const response = await axios.post(
-        'https://sharik-upp.vercel.app/api/sendOrder',
-        orderDetails,
-      )
+      const response = await axios.post('/api/sendOrder', orderDetails)
       console.log(response.data)
       navigate('/zakaz-prunyat')
       dispatch(clearItems())

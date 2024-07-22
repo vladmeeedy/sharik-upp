@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/sendOrder",
+      "destination": "/api/sendOrder.js"
+    }
+  ]
+}
