@@ -28,14 +28,13 @@ const Cart = () => {
       buyerInfo: values,
       cartItems: items,
     }
-
     try {
       const response = await axios.post(
         'http://localhost:5000/api/sendOrder',
         orderDetails,
       )
       console.log(response.data)
-      navigate('/zakaz-prinyat')
+      navigate('/zakaz-prunyat')
       dispatch(clearItems())
       alert('Заказ успешно отправлен')
     } catch (error) {
