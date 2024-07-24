@@ -2,12 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import fetch from "node-fetch";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 const TELEGRAM_API_TOKEN = "7438927464:AAEtXYOVk80bXFme_dKfApdqD93EOdpQkNo";
 const TELEGRAM_CHAT_ID = "675843760";
