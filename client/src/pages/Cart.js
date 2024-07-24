@@ -30,7 +30,7 @@ const Cart = () => {
     }
     try {
       const response = await axios.post(
-        'https://sharik-upp.vercel.app/api/sendOrder',
+        `${process.env.REACT_APP_API_BASE_URL}/api/sendOrder`,
         orderDetails,
       )
       console.log(response.data)
