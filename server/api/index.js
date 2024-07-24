@@ -15,7 +15,7 @@ const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post("/api/sendOrder", (req, res) => {
+app.post("/", (req, res) => {
   const { buyerInfo, cartItems } = req.body;
 
   console.log("Received order:", req.body);
