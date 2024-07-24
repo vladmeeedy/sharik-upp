@@ -30,7 +30,7 @@ const Cart = () => {
     }
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_SERVERURL}`,
+        `${process.env.REACT_APP_SERVERURL}/api/sendOrder`,
         orderDetails,
       )
       console.log(response.data)
