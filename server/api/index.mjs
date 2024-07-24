@@ -12,7 +12,7 @@ const TELEGRAM_CHAT_ID = "675843760";
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post("/", (req, res) => {
+app.post("/api/sendOrder", (req, res) => {
   const { buyerInfo, cartItems } = req.body;
 
   console.log("Received order:", req.body);
