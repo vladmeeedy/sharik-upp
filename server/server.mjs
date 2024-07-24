@@ -1,7 +1,7 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import fetch from "node-fetch";
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const fetch = require("node-fetch");
 
 const app = express();
 const PORT = 5000;
