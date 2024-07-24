@@ -9,13 +9,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const TELEGRAM_API_TOKEN = process.env.TELEGRAM_API_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+const TELEGRAM_API_TOKEN = "7438927464:AAEtXYOVk80bXFme_dKfApdqD93EOdpQkNo";
+const TELEGRAM_CHAT_ID = "675843760";
 
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post("/", (req, res) => {
+app.post("/api/sendOrder", (req, res) => {
   const { buyerInfo, cartItems } = req.body;
 
   console.log("Received order:", req.body);
