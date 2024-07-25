@@ -15,10 +15,10 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
   const onclickAdd = () => {
     const item = {
       id,
-      title: ProductTitle[i18n.language],
-      price: productPrice[i18n.language],
+      title: title[i18n.language],
+      price,
       imageUrl,
-      description: productDescription[i18n.language],
+      description: description[i18n.language],
       count: 0,
     }
     dispatch(addItem(item))
@@ -35,14 +35,14 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
             />
           </div>
 
-          <h4 className="product-block__title">{title[i18n.language]}</h4>
+          <h4 className="product-block__title">{t('productTitle')}</h4>
         </Link>
 
         <div className="product-block__description">
-          <p>{description[i18n.language]}</p>
+          <p>{t('productDescription')}</p>
         </div>
         <div className="product-block__bottom">
-          <div className="product-block__price">{price} ₴</div>
+          <div className="product-block__price">{t('productPrice')} ₴</div>
           <button
             onClick={onclickAdd}
             className="button button--outline button--add"
