@@ -15,6 +15,7 @@
   "productTitle": "Назва",
   "productDescription": "Опис",
   "productPrice": "Ціна",
+  "goBack": "Повернутися",
   "orderFormTitle": "Замовник",
   "orderFormName": "Им'я",
   "orderFormLastName": "Прізвище",

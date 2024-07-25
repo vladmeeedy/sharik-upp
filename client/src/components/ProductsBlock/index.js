@@ -35,14 +35,14 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
             />
           </div>
 
-          <h4 className="product-block__title">{t('productTitle')}</h4>
+          <h4 className="product-block__title">{title[i18n.language]}</h4>
         </Link>
 
         <div className="product-block__description">
-          <p>{t('productDescription')}</p>
+          <p>{description[i18n.language]}</p>
         </div>
         <div className="product-block__bottom">
-          <div className="product-block__price">{t('productPrice')} ₴</div>
+          <div className="product-block__price">{price} ₴</div>
           <button
             onClick={onclickAdd}
             className="button button--outline button--add"

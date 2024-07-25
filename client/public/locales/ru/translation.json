@@ -15,6 +15,7 @@
   "productTitle": "Название",
   "productDescription": "Описание",
   "productPrice": "Цена",
+  "goBack": "Назад",
   "orderFormTitle": "Покупатель",
   "orderFormName": "Имя",
   "orderFormLastName": "Фамилия",
