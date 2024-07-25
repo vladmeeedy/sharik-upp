@@ -18,9 +18,7 @@ const Cart = () => {
   const totalCount = items.reduce((sum, item) => sum + item.count, 0)
 
   const onClickClear = () => {
-    if (window.confirm('Очистить корзину?')) {
-      dispatch(clearItems())
-    }
+    dispatch(clearItems())
   }
 
   const handleSubmit = async (values) => {
@@ -36,14 +34,13 @@ const Cart = () => {
       console.log(response.data)
       navigate('/zakaz-prunyat')
       dispatch(clearItems())
-      alert('Заказ успешно отправлен')
+      alert(t('orderSuccess'))
     } catch (error) {
-      console.error('Ошибка при отправке заказа:', error)
-      alert('Ошибка при отправке заказа')
+      console.error(t('orderError'), error)
+      alert(t('orderError'))
     }
     console.log(orderDetails)
   }
-
   if (!totalPrice) {
     return <CartEmpty />
   }

@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addItem } from '../../redux/cart/slice'
 import { selectCartItemById } from '../../redux/cart/selectors'
 import { Link } from 'react-router-dom'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
 export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
   const dispatch = useDispatch()
   const cartItem = useSelector(selectCartItemById(id))
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
   const addedCount = cartItem ? cartItem.count : 0
 
@@ -16,7 +16,7 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
     const item = {
       id,
       title: title[i18n.language],
-      price,
+      price: price[i18n.language],
       imageUrl,
       description: description[i18n.language],
       count: 0,
