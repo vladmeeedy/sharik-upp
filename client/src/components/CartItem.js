@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux'
 import { addItem, minusItem, removeItem } from '../redux/cart/slice'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
 export const CartItem = ({ id, title, size, type, price, count, imageUrl }) => {
   const dispatch = useDispatch()
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
   const onClickPlus = () => {
     dispatch(addItem({ id }))
@@ -15,9 +15,7 @@ export const CartItem = ({ id, title, size, type, price, count, imageUrl }) => {
   }
 
   const onClickRemove = () => {
-    if (window.confirm('Tи дійсно бажаєш видалити цей товар?')) {
-      dispatch(removeItem(id))
-    }
+    dispatch(removeItem(id))
   }
 
   return (
@@ -30,7 +28,7 @@ export const CartItem = ({ id, title, size, type, price, count, imageUrl }) => {
         />
       </div>
       <div className="cart__item-info">
-        <h3>{title}</h3>        
+        <h3>{title}</h3>
       </div>
       <div className="cart__item-count">
         <button
