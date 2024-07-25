@@ -2,18 +2,12 @@ import axios from 'axios'
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from 'react-redux'
-import { addItem } from '../redux/cart/slice'
-import { selectCartItemById } from '../redux/cart/selectors'
 
 const FullProduct = () => {
   const { id } = useParams()
   const [product, setProduct] = React.useState()
   const navigate = useNavigate()
   const { t, i18n } = useTranslation()
-  const dispatch = useDispatch()
-  const cartItem = useSelector(selectCartItemById(id))
-  const addedCount = cartItem ? cartItem.count : 0
 
   React.useEffect(() => {
     async function fetchProduct() {
@@ -22,12 +16,12 @@ const FullProduct = () => {
         const [result] = data.filter((obj) => obj.id === id)
         setProduct(result)
       } catch (error) {
-        alert(t('productFetchError'))
+        alert('Помилка при отриманні товару')
         navigate('/')
       }
     }
     fetchProduct()
-  }, [id, navigate, t])
+  }, [id, navigate])
 
   if (!product) {
     return 'loading...'
@@ -35,18 +29,6 @@ const FullProduct = () => {
 
   const handleBackClick = () => {
     navigate(-1)
-  }
-
-  const onclickAdd = () => {
-    const item = {
-      id,
-      title: product.title[i18n.language],
-      price: product.price,
-      imageUrl: product.imageUrl,
-      description: product.description[i18n.language],
-      count: 0,
-    }
-    dispatch(addItem(item))
   }
 
   return (
@@ -65,21 +47,14 @@ const FullProduct = () => {
             <p>{product.description[i18n.language]}</p>
           </div>
           <div className="product-info">
-            <span>{t('productPrice')}:</span> <p>{product.price} ₴</p>
+            <span>{t('productTitle')}:</span> <p>{product.price} ₴</p>
           </div>
-          <button
-            onClick={onclickAdd}
-            className="button button--outline button--add"
-          >
-            <span>{t('productsBlockButton')}</span>
-            {addedCount > 0 && <i>{addedCount}</i>}
-          </button>
         </div>
         <button
           className="button button--outline button--add"
           onClick={handleBackClick}
         >
-          <span>{t('goBack')}</span>
+          <span>Назад</span>
         </button>
       </div>
     </div>
