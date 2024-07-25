@@ -15,10 +15,10 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
   const onclickAdd = () => {
     const item = {
       id,
-      title: title[i18n.language],
-      price: price[i18n.language],
+      title: ProductTitle[i18n.language],
+      price: productPrice[i18n.language],
       imageUrl,
-      description: description[i18n.language],
+      description: productDescription[i18n.language],
       count: 0,
     }
     dispatch(addItem(item))
