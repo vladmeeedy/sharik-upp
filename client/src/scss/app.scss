@@ -402,6 +402,7 @@ body {
 
     &-count {
       display: flex;
+      flex-direction: column-reverse;
       align-items: center;
       justify-content: space-between;
       width: 13%;
@@ -443,7 +444,6 @@ body {
 
     &-price {
       display: flex;
-      flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
       width: 33%;
