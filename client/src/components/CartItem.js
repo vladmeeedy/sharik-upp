@@ -20,11 +20,13 @@ export const CartItem = ({ id, title, size, type, price, count, imageUrl }) => {
 
   return (
     <div className="cart__item">
-      <img
-        className="cart__item-img"
-        src={process.env.PUBLIC_URL + imageUrl}
-        alt={title}
-      />
+      <div className="cart__item-img">
+        <img
+          className="product-block__image"
+          src={process.env.PUBLIC_URL + imageUrl}
+          alt={title}
+        />
+      </div>
       <div className="cart__item-info">
         <h3>{title}</h3>
       </div>
