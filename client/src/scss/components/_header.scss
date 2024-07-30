@@ -181,6 +181,10 @@
         ul {
           flex-direction: row;
           justify-content: flex-end;
+
+          li {
+            font-size: 1.1rem;
+          }
         }
       }
 
