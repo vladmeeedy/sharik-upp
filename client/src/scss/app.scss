@@ -687,6 +687,7 @@ body {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: space-between;
+        margin: auto 5px;
         width: 20%;
 
         &-minus {
@@ -727,6 +728,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: auto 5px;
+        text-align: center;
         width: 45%;
 
         b {
