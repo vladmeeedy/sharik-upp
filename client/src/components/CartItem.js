@@ -20,13 +20,11 @@ export const CartItem = ({ id, title, size, type, price, count, imageUrl }) => {
 
   return (
     <div className="cart__item">
-      <div className="cart__item-img">
-        <img
-          className="product-block__image"
-          src={process.env.PUBLIC_URL + imageUrl}
-          alt={title}
-        />
-      </div>
+      <img
+        className="cart__item-img"
+        src={process.env.PUBLIC_URL + imageUrl}
+        alt={title}
+      />
       <div className="cart__item-info">
         <h3>{title}</h3>
       </div>
@@ -77,7 +75,7 @@ export const CartItem = ({ id, title, size, type, price, count, imageUrl }) => {
         </button>
       </div>
       <div className="cart__item-price">
-        <p>{price * count} ₴</p>
+        <b>{price * count} ₴</b>
       </div>
       <div className="cart__item-remove">
         <div
