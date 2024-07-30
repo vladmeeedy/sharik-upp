@@ -44,6 +44,9 @@
     min-width: 32px;
     padding: 0;
     border-width: 2px;
+    svg {
+      pointer-events: none;
+    }
   }
 
   &--black {
@@ -58,7 +61,7 @@
   &--outline {
     background-color: #fff;
     border-color: $blue;
-    
+
     &,
     span {
       color: $blue;
@@ -146,14 +149,12 @@
     border-radius: 100px;
     background: linear-gradient(45deg, #ff357a, #fff172);
     border: none;
-    &:hover{
+    &:hover {
       background: linear-gradient(45deg, #f4256a, #fbea56);
-
     }
 
     @media (max-width: 645px) {
       padding: 4px;
-      
     }
 
     svg {
