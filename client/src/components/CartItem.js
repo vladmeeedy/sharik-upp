@@ -77,7 +77,7 @@ export const CartItem = ({ id, title, size, type, price, count, imageUrl }) => {
         </button>
       </div>
       <div className="cart__item-price">
-        <b>{price * count} ₴</b>
+        <p>{price * count} ₴</p>
       </div>
       <div className="cart__item-remove">
         <div
