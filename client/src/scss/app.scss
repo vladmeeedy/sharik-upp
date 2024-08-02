@@ -499,6 +499,11 @@ body {
   &__bottom {
     margin: 40px 0;
 
+    @media (max-width: 645px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
     &-details {
       display: flex;
       justify-content: space-between;
