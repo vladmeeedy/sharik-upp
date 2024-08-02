@@ -15,9 +15,7 @@ const Cart = () => {
   const navigate = useNavigate()
   const { t } = useTranslation()
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  window.scrollTo(0, 0)
 
   const totalCount = items.reduce((sum, item) => sum + item.count, 0)
 
