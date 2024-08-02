@@ -4,6 +4,7 @@ import { addItem } from '../../redux/cart/slice'
 import { selectCartItemById } from '../../redux/cart/selectors'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet'
 
 export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
   const dispatch = useDispatch()
@@ -34,6 +35,14 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
               alt={title[i18n.language]}
             />
           </div>
+          <Helmet>
+            <title>{title[i18n.language]} - SHARIK UPP</title>
+            <meta name="description" content={description[i18n.language]} />
+            <meta
+              name="keywords"
+              content="гелиевые шары, шары с гелием, купить гелиевые шары, доставка шаров"
+            />
+          </Helmet>
 
           <h4 className="product-block__title">{title[i18n.language]}</h4>
         </Link>

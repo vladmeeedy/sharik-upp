@@ -407,6 +407,14 @@ body {
       justify-content: space-between;
       width: 13%;
 
+      @media (max-width: 1200px) {
+        flex-direction: row;
+      }
+
+      @media (max-width: 645px) {
+        flex-direction: column-reverse;
+      }
+
       &-minus {
         svg {
           path:first-of-type {

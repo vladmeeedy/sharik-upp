@@ -7,10 +7,10 @@ import { selectFilter } from '../redux/filter/selectors'
 import { selectProductData } from '../redux/products/selectors'
 import { fetchBallons } from '../redux/products/asyncActions'
 import { useAppDispatch } from '../redux/store'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
 const LatexBalloons = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const { categoryId } = useSelector(selectFilter)
   const { items, status } = useSelector(selectProductData)

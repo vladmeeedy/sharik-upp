@@ -47,7 +47,7 @@ const FullProduct = () => {
             <p>{product.description[i18n.language]}</p>
           </div>
           <div className="product-info">
-            <span>{t('productTitle')}:</span> <p>{product.price} ₴</p>
+            <span>{t('productPrice')}:</span> <p>{product.price} ₴</p>
           </div>
         </div>
         <button
