@@ -31,7 +31,7 @@ const Header = React.memo(() => {
           </div>
         </NavLink>
         <div className="contacts">
-          <a className="phoneNumber" href="tel:+380980424818">
+          <a className="phoneNumber" href="tel:+380965520050">
             <PiPhoneCallBold className="phoneIcon" />
             <p>(098) 042-48-18</p>
           </a>
@@ -39,7 +39,7 @@ const Header = React.memo(() => {
             <FaViber className="viberIcon" />
             <p>viber</p>
           </a>
-          <a className="telegram" href="https://t.me/vladme777">
+          <a className="telegram" href="https://t.me/sharikUpp">
             <FaTelegram className="telegramIcon" />
             <p>telegram</p>
           </a>

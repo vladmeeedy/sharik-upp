@@ -3,7 +3,6 @@ import { PiPhoneCallBold } from 'react-icons/pi'
 import { FaTelegram } from 'react-icons/fa'
 import { FaViber } from 'react-icons/fa'
 
-
 const ContactUs = () => {
   return (
     <div className="container">
@@ -11,9 +10,9 @@ const ContactUs = () => {
       <div className="container--contact-us">
         <div className="contacts-info">
           <h3>Контакты</h3>
-            <div>г. Киев, пр-т Петра Григоренка, 43</div>            
-            <div className="contacts">
-            <a className="phoneNumber" href="tel:+380980424818">
+          <div>г. Киев, пр-т Петра Григоренка, 43</div>
+          <div className="contacts">
+            <a className="phoneNumber" href="tel:+380965520050">
               <PiPhoneCallBold className="phoneIcon" />
               <p>(098) 042-48-18</p>
             </a>
@@ -24,7 +23,7 @@ const ContactUs = () => {
               <FaViber className="viberIcon" />
               <p>viber</p>
             </a>
-            <a className="telegram" href="https://t.me/vladme777">
+            <a className="telegram" href="https://t.me/sharikUpp">
               <FaTelegram className="telegramIcon" />
               <p>telegram</p>
             </a>
