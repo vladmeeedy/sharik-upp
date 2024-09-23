@@ -7,10 +7,11 @@ import { selectFilter } from '../redux/filter/selectors'
 import { selectProductData } from '../redux/products/selectors'
 import { fetchBallons } from '../redux/products/asyncActions'
 import { useAppDispatch } from '../redux/store'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet'
 
 const CandlesCake = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const { categoryId } = useSelector(selectFilter)
   const { items, status } = useSelector(selectProductData)
@@ -24,7 +25,7 @@ const CandlesCake = () => {
 
     dispatch(
       fetchBallons({
-        category
+        category,
       }),
     )
     window.scrollTo(0, 0)
@@ -50,9 +51,24 @@ const CandlesCake = () => {
 
   return (
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          {t('categoryCandlesCake')}
+          {''}{' '}
+        </title>
+        <meta
+          name="description"
+          content="шарики надувные, заказ шары, шары с надписью, шарики купить киев"
+        />
+        <link
+          rel="canonical"
+          href="https://www.sharik-upp.com/svechi-na-tort"
+        />
+      </Helmet>
       <h1 className="content__title">
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
-        {t('categoryCandlesCake')}
+        {t('categoryCandlesCake')}{' '}
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
       </h1>
       {status === 'error' ? (

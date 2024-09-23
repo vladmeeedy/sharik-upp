@@ -35,35 +35,6 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
               alt={title[i18n.language]}
             />
           </div>
-          <Helmet>
-            <title>{title[i18n.language]} - SHARIK UPP</title>
-            <meta name="description" content={description[i18n.language]} />
-            <meta
-              name="keywords"
-              content="гелиевые шары, шары с гелием, купить гелиевые шары, доставка шаров"
-            />
-            <script type="application/ld+json">
-              {JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'Product',
-                name: title[i18n.language],
-                description: description[i18n.language],
-                brand: {
-                  '@type': 'Brand',
-                  name: 'Sharik UPP',
-                },
-                offers: {
-                  '@type': 'Offer',
-                  url: 'https://www.sharik-upp.com/gelievye-shary',
-                  priceCurrency: 'UAN',
-                  price: price,
-                  priceValidUntil: '2024-07-31',
-                  itemCondition: 'https://schema.org/NewCondition',
-                  availability: 'https://schema.org/InStock',
-                },
-              })}
-            </script>
-          </Helmet>
 
           <h4 className="product-block__title">{title[i18n.language]}</h4>
         </Link>

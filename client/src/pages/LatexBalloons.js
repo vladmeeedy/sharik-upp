@@ -8,6 +8,7 @@ import { selectProductData } from '../redux/products/selectors'
 import { fetchBallons } from '../redux/products/asyncActions'
 import { useAppDispatch } from '../redux/store'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet'
 
 const LatexBalloons = () => {
   const { t } = useTranslation()
@@ -46,6 +47,18 @@ const LatexBalloons = () => {
 
   return (
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{t('categoryLatexBalloons')} </title>
+        <meta
+          name="description"
+          content="воздушные шары, шарики киев, шарики с гелием, купить шаріки"
+        />
+        <link
+          rel="canonical"
+          href="https://www.sharik-upp.com/gelievye-shary"
+        />
+      </Helmet>
       <h1 className="content__title">
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
         {t('categoryLatexBalloons')}{' '}

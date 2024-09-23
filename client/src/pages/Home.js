@@ -7,13 +7,14 @@ import { selectProductData } from '../redux/products/selectors'
 import { fetchBallons } from '../redux/products/asyncActions'
 import { useAppDispatch } from '../redux/store'
 import SimpleSlider from '../components/SimpleSlider'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
   const dispatch = useAppDispatch()
   const { categoryId } = useSelector(selectFilter)
   const { items, status } = useSelector(selectProductData)
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const getProducts = () => {
     const category = categoryId
@@ -46,17 +47,25 @@ const Home = () => {
 
   return (
     <div className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{t('homeTitle')}</title>
+        <meta
+          name="description"
+          content="гелиевые шары, шары с гелием, купить гелиевые шары, доставка шаров"
+        />
+        <link rel="canonical" href="https://www.sharik-upp.com/" />
+      </Helmet>
       <SimpleSlider />
       <h1 className="content__title">
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
-        {t('homeTitle')} <img src="/data/imаges/layered-heart.svg" alt="heart" />
+        {t('homeTitle')}{' '}
+        <img src="/data/imаges/layered-heart.svg" alt="heart" />
       </h1>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>{t('homeErrorTitle')} 😕</h2>
-          <p>
-          {t('homeErrorDescription')}
-          </p>
+          <p>{t('homeErrorDescription')}</p>
         </div>
       ) : (
         <div className="content__items">
