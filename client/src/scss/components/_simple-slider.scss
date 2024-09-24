@@ -20,10 +20,10 @@
     &::after {
       position: absolute;
       content: '';
-      height: 100%;
-      background: linear-gradient(45deg, rgb(140, 19, 140), blue);
+      height: 350px;
+      background: linear-gradient(45deg, rgb(136, 19, 140), blue);
       inset: 0;
-      opacity: 0.2;
+      opacity: 0.1;
       z-index: 2;
     }
     p {
