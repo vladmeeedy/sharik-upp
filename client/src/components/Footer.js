@@ -14,9 +14,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="container__logo">
-          <LazyLoad height={200} offset={100}>
-            <Logo />
-          </LazyLoad>
+          <Logo />
           <div>SHARIK-UPP</div>
           <p>© Copyright - {t('footerCopiright')} 2024</p>
         </div>
