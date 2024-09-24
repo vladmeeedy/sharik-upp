@@ -5,6 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/balloonsFavicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -16,18 +17,27 @@
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
-
       gtag('config', 'G-44XZK2LCYW')
     </script>
 
+    <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload key fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
+      as="style"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/balloonsFavicon.svg" />
+
+    <!-- Schema.org JSON-LD for SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
