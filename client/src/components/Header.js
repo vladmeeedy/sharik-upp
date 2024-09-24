@@ -27,7 +27,7 @@ const Header = React.memo(() => {
         <NavLink to="/">
           <div className="header__logo">
             <Logo />
-            <h1>Sharik-upp</h1>
+            <div>Sharik-upp</div>
           </div>
         </NavLink>
         <div className="contacts">

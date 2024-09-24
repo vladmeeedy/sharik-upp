@@ -49,19 +49,16 @@ const Home = () => {
     <div className="container">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{t('homeTitle')}</title>
-        <meta
-          name="description"
-          content="гелиевые шары, шары с гелием, купить гелиевые шары, доставка шаров"
-        />
+        <title>{t('descНоmePage.titleHelmet')}</title>
+        <meta name="description" content={t('descНоmePage.descHelmet')} />
         <link rel="canonical" href="https://www.sharik-upp.com/" />
       </Helmet>
       <SimpleSlider />
-      <h1 className="content__title">
+      <div className="content__title">
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
         {t('homeTitle')}{' '}
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
-      </h1>
+      </div>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>{t('homeErrorTitle')} 😕</h2>
@@ -72,6 +69,20 @@ const Home = () => {
           {status === 'loading' ? skeletons : products}
         </div>
       )}
+      <div className="content__description">
+        <h1>{t('descНоmePage.title1')}</h1>
+        <p>{t('descНоmePage.content1_1')}</p>
+        <p>{t('descНоmePage.content1_2')}</p>
+        <h2>{t('descНоmePage.title2')}</h2>
+        <p>{t('descНоmePage.content2_1')}</p>
+        <p>{t('descНоmePage.content2_2')}</p>
+        <h3>{t('descНоmePage.title3')}</h3>
+        <p>{t('descНоmePage.content3_1')}</p>
+        <p>{t('descНоmePage.content3_2')}</p>
+        <h4>{t('descНоmePage.title4')}</h4>
+        <p>{t('descНоmePage.content4_1')}</p>
+        <p>{t('descНоmePage.content4_2')}</p>
+      </div>
     </div>
   )
 }

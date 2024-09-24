@@ -59,11 +59,11 @@ const LatexBalloons = () => {
           href="https://www.sharik-upp.com/gelievye-shary"
         />
       </Helmet>
-      <h1 className="content__title">
+      <div className="content__title">
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
         {t('categoryLatexBalloons')}{' '}
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
-      </h1>
+      </div>
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>Возникла ошибка 😕</h2>

@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container">
         <div className="container__logo">
           <Logo />
-          <h1>SHARIK-UPP</h1>
+          <div>SHARIK-UPP</div>
           <p>© Copyright - {t('footerCopiright')} 2024</p>
         </div>
         <div className="container__info">

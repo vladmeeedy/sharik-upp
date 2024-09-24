@@ -2,8 +2,9 @@ import './scss/app.scss'
 import Home from './pages/Home'
 import { Route, Routes } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import ContactUs from './pages/ContactUs'
+import { useTranslation } from 'react-i18next'
 import './i18n.js'
 
 const Cart = React.lazy(
@@ -53,6 +54,11 @@ const OrderSuccessPage = React.lazy(
 )
 
 function App() {
+  const { i18n } = useTranslation()
+  useEffect(() => {
+    document.documentElement.setAttribute('lang', i18n.language)
+  }, [i18n.language])
+
   return (
     <Suspense fallback={<div>Loading translations...</div>}>
       <Routes>
