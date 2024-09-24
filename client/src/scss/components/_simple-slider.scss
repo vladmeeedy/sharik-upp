@@ -10,11 +10,21 @@
     height: 300px; /* Высота блока */
     background-size: cover;
     position: relative;
+    z-index: 3;
 
     img {
       width: 100%; /* Ширина блока */
       height: 350px; /* Высота блока */
       object-fit: cover;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      height: 100%;
+      background: linear-gradient(45deg, rgb(140, 19, 140), blue);
+      inset: 0;
+      opacity: 0.2;
+      z-index: 2;
     }
     p {
       position: absolute;
@@ -23,7 +33,7 @@
       font-style: italic;
       color: #fff;
 
-      z-index: 1;
+      z-index: 3;
       bottom: 20px;
       right: 50px;
 
@@ -39,27 +49,22 @@
         bottom: 5px;
       }
 
-      
-
-      span{
+      span {
         color: red;
         margin-left: 10px;
 
-        svg{
+        svg {
           padding-top: 15px;
           width: 0.7em;
         }
-        
       }
 
-      :nth-child(2){
-        color:aqua;
+      :nth-child(2) {
+        color: aqua;
       }
-      :nth-child(3){
-        color:yellow;
+      :nth-child(3) {
+        color: yellow;
       }
-      
     }
   }
-  
 }
