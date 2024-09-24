@@ -5,6 +5,7 @@ import { selectCartItemById } from '../../redux/cart/selectors'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
+import LazyLoad from 'react-lazyload'
 
 export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
   const dispatch = useDispatch()
@@ -29,11 +30,15 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
       <div className="product-block">
         <Link key={id} to={`/balloons/${id}`}>
           <div className="product-block__image-container">
-            <img
-              className="product-block__image"
-              src={process.env.PUBLIC_URL + imageUrl}
-              alt={title[i18n.language]}
-            />
+            <LazyLoad height={200} offset={100}>
+              <img
+                className="product-block__image"
+                src={process.env.PUBLIC_URL + imageUrl}
+                alt={title[i18n.language]}
+                width="300"
+                height="300"
+              />
+            </LazyLoad>
           </div>
 
           <h4 className="product-block__title">{title[i18n.language]}</h4>

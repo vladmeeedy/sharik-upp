@@ -67,6 +67,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/lodash.debounce": "^4.0.9",
     "@types/react-helmet": "^6.1.11",
+    "@types/react-lazyload": "^3.2.3",
     "@types/react-slick": "^0.23.13",
     "prettier": "^3.3.3",
     "react-scripts": "^5.0.1"

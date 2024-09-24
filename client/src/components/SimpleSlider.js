@@ -6,7 +6,7 @@ import LazyLoad from 'react-lazyload'
 import { useTranslation } from 'react-i18next'
 
 function SimpleSlider() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   var settings = {
     dots: true,
     infinite: true,
@@ -23,11 +23,11 @@ function SimpleSlider() {
       <Slider {...settings}>
         <div className="card">
           <LazyLoad height={200} offset={100}>
-            <img src="/data/imаges/slider-1.jpg" alt="" />
+            <img src="/data/imаges/slider-12.jpg" alt="" />
           </LazyLoad>
 
           <p>
-          {t('slider.childrenExperiences')}
+            {t('slider.childrenExperiences')}
             <span>
               <GoHeartFill />
             </span>
@@ -41,11 +41,11 @@ function SimpleSlider() {
         </div>
         <div className="card">
           <LazyLoad height={200} offset={100}>
-            <img src="/data/imаges/serca-pod-potolcom.jpg" alt="" />
+            <img src="/data/imаges/serca-pod-potolcom2.jpg" alt="" />
           </LazyLoad>
 
           <p>
-          {t('slider.romanticMoments')}
+            {t('slider.romanticMoments')}
             <span>
               <GoHeartFill />
             </span>
@@ -60,14 +60,14 @@ function SimpleSlider() {
         <div className="card">
           <LazyLoad height={200} offset={100}>
             <img
-              src="/data/imаges/Balloon-decor-for-events.jpg"
+              src="/data/imаges/Balloon-decor-for-events2.jpg"
               alt=""
               className="w-100"
             />
           </LazyLoad>
 
           <p>
-          {t('slider.holidayEvents')}
+            {t('slider.holidayEvents')}
             <span>
               <GoHeartFill />
             </span>
