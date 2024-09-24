@@ -23,7 +23,10 @@ function SimpleSlider() {
       <Slider {...settings}>
         <div className="card">
           <LazyLoad height={200} offset={100}>
-            <img src="/data/imаges/slider-12.jpg" alt="" />
+            <img
+              src="/data/imаges/slider-12.jpg"
+              alt={t('slider.childrenExperiences')}
+            />
           </LazyLoad>
 
           <p>
@@ -41,7 +44,10 @@ function SimpleSlider() {
         </div>
         <div className="card">
           <LazyLoad height={200} offset={100}>
-            <img src="/data/imаges/serca-pod-potolcom2.jpg" alt="" />
+            <img
+              src="/data/imаges/serca-pod-potolcom2.jpg"
+              alt={t('slider.romanticMoments')}
+            />
           </LazyLoad>
 
           <p>
@@ -61,8 +67,7 @@ function SimpleSlider() {
           <LazyLoad height={200} offset={100}>
             <img
               src="/data/imаges/Balloon-decor-for-events2.jpg"
-              alt=""
-              className="w-100"
+              alt={t('slider.holidayEvents')}
             />
           </LazyLoad>
 

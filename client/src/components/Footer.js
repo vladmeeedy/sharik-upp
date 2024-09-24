@@ -6,6 +6,7 @@ import { PiPhoneCallBold } from 'react-icons/pi'
 import { FaTelegram } from 'react-icons/fa'
 import { FaViber } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import LazyLoad from 'react-lazyload'
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -13,7 +14,9 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="container__logo">
-          <Logo />
+          <LazyLoad height={200} offset={100}>
+            <Logo />
+          </LazyLoad>
           <div>SHARIK-UPP</div>
           <p>© Copyright - {t('footerCopiright')} 2024</p>
         </div>
@@ -37,8 +40,9 @@ const Footer = () => {
             <p>telegram</p>
           </a>
         </div>
-
-        <Balloons />
+        <LazyLoad height={200} offset={100}>
+          <Balloons />
+        </LazyLoad>
       </div>
     </div>
   )

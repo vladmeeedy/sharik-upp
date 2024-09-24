@@ -6,6 +6,7 @@ import { FaTelegram, FaViber } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 import { selectCart } from '../redux/cart/selectors'
 import LanguageSwitcher from './LanguageSwitcher'
+import LazyLoad from 'react-lazyload'
 
 const Header = React.memo(() => {
   const { items, totalPrice } = useSelector(selectCart)
@@ -26,7 +27,9 @@ const Header = React.memo(() => {
       <div className="container">
         <NavLink to="/">
           <div className="header__logo">
-            <Logo />
+            <LazyLoad height={200} offset={100}>
+              <Logo />
+            </LazyLoad>
             <div>Sharik-upp</div>
           </div>
         </NavLink>

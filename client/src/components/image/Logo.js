@@ -6,9 +6,9 @@ const Logo = React.memo(() => {
       version="1.1"
       x="0"
       y="0"
-      //   width="451"
-      //   height="451"
       viewBox="0, 0, 451, 451"
+      role="img"
+      aria-label="Sharik-upp Logo"
     >
       <defs>
         <clipPath id="Clip_1">
