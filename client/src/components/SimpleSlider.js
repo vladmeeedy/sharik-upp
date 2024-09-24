@@ -39,7 +39,9 @@ function SimpleSlider() {
           <LazyLoad height={200} offset={100}>
             <img
               src="/data/imаges/slider-12.jpg"
+              title={t('slider.childrenExperiences')}
               alt={t('slider.childrenExperiences')}
+              loading="lazy"
             />
           </LazyLoad>
 
@@ -60,7 +62,9 @@ function SimpleSlider() {
           <LazyLoad height={200} offset={100}>
             <img
               src="/data/imаges/serca-pod-potolcom2.jpg"
+              title={t('slider.romanticMoments')}
               alt={t('slider.romanticMoments')}
+              loading="lazy"
             />
           </LazyLoad>
 
@@ -81,7 +85,9 @@ function SimpleSlider() {
           <LazyLoad height={200} offset={100}>
             <img
               src="/data/imаges/Balloon-decor-for-events2.jpg"
+              title={t('slider.holidayEvents')}
               alt={t('slider.holidayEvents')}
+              loading="lazy"
             />
           </LazyLoad>
 

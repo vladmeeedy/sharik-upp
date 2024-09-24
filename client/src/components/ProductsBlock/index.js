@@ -34,16 +34,17 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
               <img
                 className="product-block__image"
                 src={process.env.PUBLIC_URL + imageUrl}
+                title={title[i18n.language]}
                 alt={title[i18n.language]}
                 width="300"
                 height="300"
+                loading="lazy"
               />
             </LazyLoad>
           </div>
 
-          <h4 className="product-block__title">{title[i18n.language]}</h4>
+          <div className="product-block__title">{title[i18n.language]}</div>
         </Link>
-
         <div className="product-block__description">
           <p>{description[i18n.language]}</p>
         </div>
