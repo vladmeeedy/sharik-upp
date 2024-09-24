@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { GoHeartFill } from 'react-icons/go'
 import LazyLoad from 'react-lazyload'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet'
 
 function SimpleSlider() {
   const { t } = useTranslation()
@@ -20,6 +21,19 @@ function SimpleSlider() {
   }
   return (
     <div className="slider-container">
+      <Helmet>
+        <link rel="preload" href="/data/imаges/slider-12.jpg" as="image" />
+        <link
+          rel="preload"
+          href="/data/imаges/serca-pod-potolcom2.jpg"
+          as="image"
+        />
+        <link
+          rel="preload"
+          href="/data/imаges/Balloon-decor-for-events2.jpg"
+          as="image"
+        />
+      </Helmet>
       <Slider {...settings}>
         <div className="card">
           <LazyLoad height={200} offset={100}>
