@@ -24,7 +24,7 @@ app.post("/api/sendOrder", (req, res) => {
     Email: ${buyerInfo.email}
     Місто: ${buyerInfo.city}
     Адреса: ${buyerInfo.address}
-    Дата доставки: ${buyerInfo.deliveryDate}
+    Дата доставки: ${buyerInfo.deliveryDate.toISOString().split("T")[0]}
     Час доставки: ${buyerInfo.deliveryTime}
     
     Товары:
