@@ -21,6 +21,8 @@
   "orderFormLastName": "Прізвище",
   "orderFormCity": "Місто",
   "orderFormAddress": "Адреса",
+  "orderFormTimeTitle": "Час доставки",
+  "orderFormTimeInput": "Оберіть час",
   "orderFormButton": "Замовити",
   "orderSuccessTitle": "Дякуємо за замовлення!",
   "orderSuccessDescription": "Ми зв'яжемось з Вами для уточнення деталей замовлення!",

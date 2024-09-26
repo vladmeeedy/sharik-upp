@@ -18,13 +18,14 @@ app.post("/api/sendOrder", (req, res) => {
   console.log("Received order:", req.body);
 
   const message = `
-    Новый заказ:
-    Имя: ${buyerInfo.firstName} ${buyerInfo.lastName}
+    Нове замовлення:
+    Им'я: ${buyerInfo.firstName} ${buyerInfo.lastName}
     Телефон: ${buyerInfo.telephone}
     Email: ${buyerInfo.email}
-    Город: ${buyerInfo.city}
-    Адрес: ${buyerInfo.address}
+    Місто: ${buyerInfo.city}
+    Адреса: ${buyerInfo.address}
     Дата доставки: ${buyerInfo.deliveryDate}
+    Час доставки: ${buyerInfo.deliveryTime}
     
     Товары:
     ${cartItems
