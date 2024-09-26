@@ -24,8 +24,13 @@ const Cart = () => {
   }
 
   const handleSubmit = async (values) => {
+    const formattedDate = values.deliveryDate.toISOString().split('T')[0]
+
     const orderDetails = {
-      buyerInfo: values,
+      buyerInfo: {
+        ...values,
+        deliveryDate: formattedDate,
+      },
       cartItems: items,
     }
     try {
