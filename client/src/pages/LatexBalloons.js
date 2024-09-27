@@ -49,11 +49,8 @@ const LatexBalloons = () => {
     <div className="container">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{t('categoryLatexBalloons')} </title>
-        <meta
-          name="description"
-          content="воздушные шары, шарики киев, шарики с гелием, купить шаріки"
-        />
+        <title>{t('descLatexballoons.titleHelmet')} </title>
+        <meta name="description" content={t('descLatexballoons.descHelmet')} />
         <link
           rel="canonical"
           href="https://www.sharik-upp.com/gelievye-shary"
@@ -76,6 +73,20 @@ const LatexBalloons = () => {
           {status === 'loading' ? skeletons : products}
         </div>
       )}
+      <div className="content__description">
+        <h1>{t('descLatexballoons.title1')}</h1>
+        <p>{t('descLatexballoons.content1_1')}</p>
+        <p>{t('descLatexballoons.content1_2')}</p>
+        <h2>{t('descLatexballoons.title2')}</h2>
+        <p>{t('descLatexballoons.content2_1')}</p>
+        <p>{t('descLatexballoons.content2_2')}</p>
+        <h3>{t('descLatexballoons.title3')}</h3>
+        <p>{t('descLatexballoons.content3_1')}</p>
+        <p>{t('descLatexballoons.content3_2')}</p>
+        <h4>{t('descLatexballoons.title4')}</h4>
+        <p>{t('descLatexballoons.content4_1')}</p>
+        <p>{t('descLatexballoons.content4_2')}</p>
+      </div>
     </div>
   )
 }
