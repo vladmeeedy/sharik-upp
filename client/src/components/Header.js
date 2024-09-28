@@ -38,7 +38,7 @@ const Header = React.memo(() => {
             <PiPhoneCallBold className="phoneIcon" />
             <p>(096) 552-00-50</p>
           </a>
-          <a className="viber" href="viber://forward?text=Ваше сообщение здесь">
+          <a className="viber" href="viber://chat?number=380965520050">
             <FaViber className="viberIcon" />
             <p>viber</p>
           </a>
