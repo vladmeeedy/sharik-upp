@@ -119,8 +119,15 @@ function App() {
               </React.Suspense>
             }
           />
+          <Route
+            path="cart"
+            element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Cart />
+              </React.Suspense>
+            }
+          />
 
-          {/* Добавляем динамические маршруты для продуктов */}
           <Route
             path="nabory/:id"
             element={
