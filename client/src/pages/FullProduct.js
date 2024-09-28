@@ -35,8 +35,10 @@ const FullProduct = () => {
   return (
     <div className="container">
       <Helmet>
-        <title>{title[i18n.language]}</title>
-        <meta name="description" content={description[i18n.language]} />
+        <meta charSet="utf-8" />
+        <title>{product.title[i18n.language]}</title>
+        <meta name="description" content={product.description[i18n.language]} />
+        <link rel="canonical" href="https://www.sharik-upp.com/" />
       </Helmet>
 
       <div className="container-product">
