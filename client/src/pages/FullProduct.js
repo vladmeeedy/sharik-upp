@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet'
 
 const FullProduct = () => {
   const { id } = useParams()
@@ -33,6 +34,11 @@ const FullProduct = () => {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>{title[i18n.language]}</title>
+        <meta name="description" content={description[i18n.language]} />
+      </Helmet>
+
       <div className="container-product">
         <div className="image-container">
           <img src={product.imageUrl} alt={product.title[i18n.language]} />
