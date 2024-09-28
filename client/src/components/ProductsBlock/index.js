@@ -7,10 +7,30 @@ import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
 import LazyLoad from 'react-lazyload'
 
-export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
+export const ProductsBlock = ({
+  id,
+  title,
+  price,
+  imageUrl,
+  description,
+  category,
+}) => {
   const dispatch = useDispatch()
   const cartItem = useSelector(selectCartItemById(id))
   const { t, i18n } = useTranslation()
+
+  const allCategory = [
+    'nabory',
+    'gelievye-shary',
+    'folgirovannye-figury',
+    'folgirovannye-zvezdy',
+    'folgirovannye-cifry',
+    'korobka-syurpriz',
+    'svechi-na-tort',
+  ]
+
+  const categoryName = allCategory[category]
+  console.log(categoryName)
 
   const addedCount = cartItem ? cartItem.count : 0
 
@@ -22,13 +42,15 @@ export const ProductsBlock = ({ id, title, price, imageUrl, description }) => {
       imageUrl,
       description: description[i18n.language],
       count: 0,
+      category,
     }
     dispatch(addItem(item))
+    console.log(category)
   }
   return (
     <div className="product-block-wrapper">
       <div className="product-block">
-        <Link key={id} to={`/balloons/${id}`}>
+        <Link key={id} to={`/${categoryName}/${id}`}>
           <div className="product-block__image-container">
             <LazyLoad height={200} offset={100}>
               <img
