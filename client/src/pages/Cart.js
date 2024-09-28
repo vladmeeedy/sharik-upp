@@ -39,7 +39,7 @@ const Cart = () => {
         orderDetails,
       )
       console.log(response.data)
-      navigate('/zakaz-prunyat')
+      navigate('/zakaz-prinyat')
       dispatch(clearItems())
       alert(t('orderSuccess'))
     } catch (error) {
