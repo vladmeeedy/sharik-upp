@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { IoIosArrowUp } from 'react-icons/io'
 import { FaTelegram, FaViber } from 'react-icons/fa'
-
+import instagramPng from '../assets/images/instagram.png'
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [hideIcons, setHideIcons] = useState(false)
@@ -52,6 +52,9 @@ const ScrollToTopButton = () => {
           </a>
           <a className="telegram" href="https://t.me/sharikUpp">
             <FaTelegram className="telegramIcon" />
+          </a>
+          <a className="instagram" href="https://www.instagram.com/sharik_upp/">
+            <img src={instagramPng} className="insagramIcon" />
           </a>
         </>
       )}

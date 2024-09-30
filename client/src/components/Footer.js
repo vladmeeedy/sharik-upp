@@ -7,6 +7,7 @@ import { FaTelegram } from 'react-icons/fa'
 import { FaViber } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
 import LazyLoad from 'react-lazyload'
+import { FaSquareInstagram } from 'react-icons/fa6'
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -36,6 +37,10 @@ const Footer = () => {
           <a className="telegram" href="https://t.me/sharikUpp">
             <FaTelegram className="telegramIcon" />
             <p>telegram</p>
+          </a>
+          <a className="instagram" href="https://www.instagram.com/sharik_upp/">
+            <FaSquareInstagram className="instagramIcon" />
+            <p>instagram</p>
           </a>
         </div>
         <LazyLoad height={200} offset={100}>

@@ -68,7 +68,8 @@
       }
     }
 
-    svg {
+    svg,
+    img {
       width: 80px;
     }
 
@@ -76,7 +77,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 50px;
+      gap: 15px;
+
+      @media (max-width: 820px) {
+        align-items: normal;
+      }
 
       @media (max-width: 645px) {
         grid-row: 1;
@@ -96,19 +101,27 @@
   }
 
   .contacts {
-    grid-row: 1;
-    grid-column: 2;
+    grid-column: 2 / span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row: auto auto;
     grid-gap: 45px;
+
     @media (max-width: 645px) {
       margin-top: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 25px;
-      justify-content: space-evenly;
+
+      .viber {
+        grid-row: 2;
+        grid-column: 1 / span 1;
+      }
+      .telegram {
+        grid-row: 2;
+        grid-column: 2 / span 2;
+      }
+      .instagram {
+        grid-row: 2;
+        grid-column: 3 / span 3;
+      }
     }
 
     .phoneNumber {
@@ -116,10 +129,11 @@
       flex-direction: row;
       align-items: center;
       grid-row: 1;
-      grid-column: 1 / span 2;
+      grid-column: 2 / span 3;
+      text-wrap: nowrap;
 
       @media (max-width: 645px) {
-        grid-column: 1;
+        grid-column: 1 / span 3;
       }
 
       .phoneIcon {
@@ -167,8 +181,14 @@
       grid-row: 2;
     }
 
+    .instagram {
+      grid-column: 3;
+      grid-row: 2;
+    }
+
     .viber,
-    .telegram {
+    .telegram,
+    .instagram {
       display: flex;
       align-items: center;
       .viberIcon {
@@ -185,6 +205,14 @@
         height: 1.5rem;
         &:hover {
           color: darken(#fff, 15%);
+        }
+      }
+      .instagramIcon {
+        fill: white;
+        width: 1.5rem;
+        height: 1.5rem;
+        &:hover {
+          fill: darken(#fff, 15%);
         }
       }
       p {
@@ -210,6 +238,14 @@
     }
   }
 
+  @media (max-width: 1030px) {
+    .container {
+      svg:last-child {
+        display: none;
+      }
+    }
+  }
+
   @media (max-width: 820px) {
     .container {
       padding: 5px 10px;
@@ -220,6 +256,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        grid-column: 1 / span 2;
 
         :nth-child(1) {
           width: 70px;
@@ -240,10 +277,6 @@
           font-size: 10px;
           text-align: center;
         }
-      }
-
-      svg:last-child {
-        display: none;
       }
 
       &__info {
@@ -267,12 +300,17 @@
       }
 
       .viber,
-      .telegram {
+      .telegram,
+      .instagram {
         .viberIcon {
           width: 1.1rem;
           height: 1.1rem;
         }
         .telegramIcon {
+          width: 1.1rem;
+          height: 1.1rem;
+        }
+        .instagramIcon {
           width: 1.1rem;
           height: 1.1rem;
         }

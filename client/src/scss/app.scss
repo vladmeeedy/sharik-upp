@@ -917,7 +917,7 @@ body {
 .scroll-to-top-container {
   position: fixed;
   bottom: 130px; /* Чтобы было расстояние между кнопками и скроллом */
-  right: 50px;
+  right: 47px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -931,7 +931,8 @@ body {
   }
 
   .viber,
-  .telegram {
+  .telegram,
+  .instagram {
     .viberIcon {
       fill: #784f97;
       width: 2.5rem;
@@ -948,9 +949,14 @@ body {
       &:hover {
         color: darken(#259bd8, 15%);
       }
-    } // position: fixed;
-    // bottom: 100px;
-    // right: 40px;
+    }
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      &:hover {
+        color: darken(#259bd8, 15%);
+      }
+    }
   }
 
   .scroll-to-top {
