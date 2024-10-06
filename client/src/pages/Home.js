@@ -39,6 +39,7 @@ const Home = () => {
       }
       return false
     })
+    .reverse()
     .map((obj) => <ProductsBlock key={obj.id} {...obj} />)
 
   const skeletons = [...new Array(6)].map((_, index) => (
