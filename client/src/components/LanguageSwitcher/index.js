@@ -6,8 +6,8 @@ const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
 
   const locales = {
-    ru: { title: 'RU' },
     uk: { title: 'UK' },
+    ru: { title: 'RU' },
   }
 
   const changeLanguage = (lng) => {
