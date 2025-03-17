@@ -3,12 +3,19 @@ import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem } from '../redux/cart/slice'
+import { selectCartItemById } from '../redux/cart/selectors'
 
 const FullProduct = () => {
   const { id } = useParams()
-  const [product, setProduct] = React.useState()
+  const [product, setProduct] = React.useState(null)
   const navigate = useNavigate()
   const { t, i18n } = useTranslation()
+  const dispatch = useDispatch()
+
+  const cartItem = useSelector(selectCartItemById(id))
+  const addedCount = cartItem ? cartItem.count : 0
 
   React.useEffect(() => {
     async function fetchProduct() {
@@ -26,6 +33,19 @@ const FullProduct = () => {
 
   if (!product) {
     return 'loading...'
+  }
+
+  const onClickAdd = () => {
+    const item = {
+      id,
+      title: product.title[i18n.language],
+      price: product.price,
+      imageUrl: product.imageUrl,
+      description: product.description[i18n.language],
+      count: 0,
+      category: product.category,
+    }
+    dispatch(addItem(item))
   }
 
   const handleBackClick = () => {
@@ -58,6 +78,16 @@ const FullProduct = () => {
             <span>{t('productPrice')}:</span> <p>{product.price} ₴</p>
           </div>
         </div>
+
+        {/* Кнопка "Добавить в корзину" */}
+        <button
+          onClick={onClickAdd}
+          className="button button--outline button--add"
+        >
+          <span>{t('productsBlockButton')}</span>
+          {addedCount > 0 && <i>{addedCount}</i>}
+        </button>
+
         <button
           className="button button--outline button--add"
           onClick={handleBackClick}
