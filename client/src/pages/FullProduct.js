@@ -46,6 +46,7 @@ const FullProduct = () => {
       category: product.category,
     }
     dispatch(addItem(item))
+    navigate('/cart')
   }
 
   const handleBackClick = () => {
