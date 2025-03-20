@@ -18,6 +18,7 @@ const FullProduct = () => {
   const addedCount = cartItem ? cartItem.count : 0
 
   React.useEffect(() => {
+    window.scrollTo(0, 0)
     async function fetchProduct() {
       try {
         const { data } = await axios.get('/data/productsData.json')
@@ -89,12 +90,24 @@ const FullProduct = () => {
           {addedCount > 0 && <i>{addedCount}</i>}
         </button>
 
-        <button
-          className="button button--outline button--add"
-          onClick={handleBackClick}
-        >
-          <span>Назад</span>
-        </button>
+        <div className="go-back-btn" onClick={handleBackClick}>
+          <svg
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 13L1 6.93015L6.86175 1"
+              stroke="#D3D3D3"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            ></path>
+          </svg>
+          <span>{t('cartGoBackButton')}</span>
+        </div>
       </div>
     </div>
   )

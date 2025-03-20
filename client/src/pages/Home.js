@@ -9,7 +9,10 @@ import { useAppDispatch } from '../redux/store'
 import SimpleSlider from '../components/SimpleSlider'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
-
+import { FaTruckFast } from 'react-icons/fa6'
+import { FaAward } from 'react-icons/fa'
+import { MdMobileFriendly } from 'react-icons/md'
+import { FaFaceSmileWink } from 'react-icons/fa6'
 const Home = () => {
   const dispatch = useAppDispatch()
   const { categoryId } = useSelector(selectFilter)
@@ -55,6 +58,30 @@ const Home = () => {
         <link rel="canonical" href="https://www.sharik-upp.com/" />
       </Helmet>
       <SimpleSlider />
+      <div className="content__promo">
+        <div>
+          <div>
+            <FaTruckFast />
+            <p>
+              Швидка <br /> доставка
+            </p>
+          </div>
+          <div>
+            <FaAward />
+            <p>
+              Преміум <br /> якість
+            </p>
+          </div>
+          <div>
+            <MdMobileFriendly />
+            <p>
+              Індивідуальний <br /> підхід
+            </p>
+          </div>
+        </div>
+        <div>Замовляй🎈онлайн або дзвони! 🚀</div>
+      </div>
+
       <div className="content__title">
         <img src="/data/imаges/layered-heart.svg" alt="heart" />
         {t('homeTitle')}{' '}
